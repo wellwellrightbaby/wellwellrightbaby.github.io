@@ -12,12 +12,10 @@
 <meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/15/geshi/index.html">
 <meta property="og:site_name" content="Shevon's Blog">
 <meta property="og:description" content="摘要:格式">
-<meta property="og:image" content="https://wellwellrightbaby.github.io/2017/04/15/geshi/图片地址">
-<meta property="og:updated_time" content="2017-04-15T05:38:03.868Z">
+<meta property="og:updated_time" content="2017-04-15T05:41:38.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="geshi">
 <meta name="twitter:description" content="摘要:格式">
-<meta name="twitter:image" content="https://wellwellrightbaby.github.io/2017/04/15/geshi/图片地址">
   
     <link rel="alternate" href="/atom.xml" title="Shevon&#39;s Blog" type="application/atom+xml">
   
@@ -121,10 +119,58 @@
 <ol>
 <li>代码区块 四个空格 开头  </li>
 <li>链接 <a href="链接地址">文字</a>  </li>
-<li>图片 <img src="图片地址" alt="图片说明">，图片地址可以是本地路径，也可以是网络地址  </li>
+<li>图片<br>!<a href="图片地址">图片说明</a>，图片地址可以是本地路径，也可以是网络地址  </li>
 <li>强调 <strong>文字</strong> , <strong>文字</strong> , <em>文字</em> , <em>文字</em>  </li>
-<li>代码<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">### 二.新建  </div><div class="line">&gt; hexo new &quot;my blog&quot;</div><div class="line"></div><div class="line">### 三.编译  </div><div class="line">&gt; hexo generate  </div><div class="line">一般部署上去前都需要编译一下，编译后会出现一个 _public_ 文件，将所有的md文件编译成html文件。</div><div class="line"></div><div class="line">### 四.开启本地hexo服务 唔。。我一般没有这个步骤</div><div class="line">&gt; hexo server  </div><div class="line"></div><div class="line">### 五.部署  </div><div class="line">&gt; hexo deploy  </div><div class="line"></div><div class="line">### 六.清除 _public_  </div><div class="line">&gt; hexo clean  </div><div class="line"></div><div class="line">### 七.Markdown编译阅读器  </div><div class="line">[使用Cmd Markdown 编辑阅读器](https://www.zybuluo.com/mdeditor)  </div><div class="line"></div><div class="line">1. 分割线  </div><div class="line">&gt; -----  </div><div class="line"></div><div class="line">2. 字体  </div><div class="line">&gt; * **粗体**  </div><div class="line">&gt; * *斜体*  </div><div class="line"></div><div class="line">3. 像多选框似的钩钩叉叉  </div><div class="line">- [ ] 不未完成  </div><div class="line">- [ ] 未完成  </div><div class="line">- [x] 完成  </div><div class="line">- [x] 完成  </div><div class="line"></div><div class="line">4. 书写一个好看的公式  </div><div class="line">&gt; $$E=mc^2$$</div><div class="line"></div><div class="line">5. 高亮一段代码  </div><div class="line"></div><div class="line">```java</div><div class="line">public static void main(String[] args)&#123;</div><div class="line">	System.out.println(&quot;hello world!&quot;);</div><div class="line">&#125;</div><div class="line">```  </div><div class="line"></div><div class="line">6. 行内代码块</div><div class="line">使用 \`代码` 表示行内代码块  </div><div class="line">例如：  </div><div class="line">这个一个`行内代码块`  </div><div class="line"></div><div class="line">7. 代码块  </div><div class="line">使用 四个缩进空格 表示代码块。  </div><div class="line">例如：  </div><div class="line">    这是一个代码块，此行左侧有四个不可见的空格。  </div><div class="line"></div><div class="line">-----  </div><div class="line"></div><div class="line">8. 内容目录  </div><div class="line">在段落中填写 `[TOC]` 以显示全文内容的目录结构。  </div><div class="line"></div><div class="line">9. 删除线  </div><div class="line">使用 ~~ 表示删除线。  </div><div class="line">~~这是一行错误文本。~~  </div><div class="line"></div><div class="line">10. 注脚  </div><div class="line">使用 [^keyword] 表示注脚。</div><div class="line">这是一个注脚[^footnote]的样例。</div><div class="line">这是第二个注脚[^footnote2]的样例。 </div><div class="line"></div><div class="line">11. 加强的代码块</div><div class="line">非代码示例：</div></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="二-新建"><a href="#二-新建" class="headerlink" title="二.新建"></a>二.新建</h3><blockquote>
+<p>hexo new “my blog”</p>
+</blockquote>
+<h3 id="三-编译"><a href="#三-编译" class="headerlink" title="三.编译"></a>三.编译</h3><blockquote>
+<p>hexo generate<br>一般部署上去前都需要编译一下，编译后会出现一个 <em>public</em> 文件，将所有的md文件编译成html文件。</p>
+</blockquote>
+<h3 id="四-开启本地hexo服务-唔。。我一般没有这个步骤"><a href="#四-开启本地hexo服务-唔。。我一般没有这个步骤" class="headerlink" title="四.开启本地hexo服务 唔。。我一般没有这个步骤"></a>四.开启本地hexo服务 唔。。我一般没有这个步骤</h3><blockquote>
+<p>hexo server  </p>
+</blockquote>
+<h3 id="五-部署"><a href="#五-部署" class="headerlink" title="五.部署"></a>五.部署</h3><blockquote>
+<p>hexo deploy  </p>
+</blockquote>
+<h3 id="六-清除-public"><a href="#六-清除-public" class="headerlink" title="六.清除 public"></a>六.清除 <em>public</em></h3><blockquote>
+<p>hexo clean  </p>
+</blockquote>
+<h3 id="七-Markdown编译阅读器"><a href="#七-Markdown编译阅读器" class="headerlink" title="七.Markdown编译阅读器"></a>七.Markdown编译阅读器</h3><p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">使用Cmd Markdown 编辑阅读器</a>  </p>
+<ol>
+<li><p>分割线  </p>
+<blockquote>
+<hr>
+</blockquote>
+</li>
+<li><p>字体  </p>
+<blockquote>
+<ul>
+<li><strong>粗体</strong>  </li>
+<li><em>斜体</em>  </li>
+</ul>
+</blockquote>
+</li>
+<li><p>像多选框似的钩钩叉叉  </p>
+</li>
+</ol>
+<ul>
+<li>[ ] 不未完成  </li>
+<li>[ ] 未完成  </li>
+<li>[x] 完成  </li>
+<li>[x] 完成  </li>
+</ul>
+<ol>
+<li><p>书写一个好看的公式  </p>
+<blockquote>
+<p>$$E=mc^2$$</p>
+</blockquote>
+</li>
+<li><p>高亮一段代码  </p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">	System.out.println(<span class="string">"hello world!"</span>);</div><div class="line">&#125;</div><div class="line">```  </div><div class="line"></div><div class="line"><span class="number">6</span>. 行内代码块</div><div class="line">使用 \`代码` 表示行内代码块  </div><div class="line">例如：  </div><div class="line">这个一个`行内代码块`  </div><div class="line"></div><div class="line"><span class="number">7</span>. 代码块  </div><div class="line">使用 四个缩进空格 表示代码块。  </div><div class="line">例如：  </div><div class="line">    这是一个代码块，此行左侧有四个不可见的空格。  </div><div class="line"></div><div class="line">-----  </div><div class="line"></div><div class="line"><span class="number">8</span>. 内容目录  </div><div class="line">在段落中填写 `[TOC]` 以显示全文内容的目录结构。  </div><div class="line"></div><div class="line"><span class="number">9</span>. 删除线  </div><div class="line">使用 ~~ 表示删除线。  </div><div class="line">~~这是一行错误文本。~~  </div><div class="line"></div><div class="line"><span class="number">10</span>. 注脚  </div><div class="line">使用 [^keyword] 表示注脚。</div><div class="line">这是一个注脚[^footnote]的样例。</div><div class="line">这是第二个注脚[^footnote2]的样例。 </div><div class="line"></div><div class="line"><span class="number">11</span>. 加强的代码块</div><div class="line">非代码示例：</div></pre></td></tr></table></figure>
 <p>$ sudo apt-get install vim-gnome<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">java 示例：</div><div class="line"></div><div class="line">```java</div><div class="line">public static void main(String[] args)&#123;</div><div class="line">	System.out.println(&quot;hello world!&quot;);</div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">JavaScript 示例： </div><div class="line"></div><div class="line">``` javascript</div><div class="line">/**</div><div class="line">* nth element in the fibonacci series.</div><div class="line">* @param n &gt;= 0</div><div class="line">* @return the nth element, &gt;= 0.</div><div class="line">*/</div><div class="line">function fib(n) &#123;</div><div class="line">  var a = 1, b = 1;</div><div class="line">  var tmp;</div><div class="line">  while (--n &gt;= 0) &#123;</div><div class="line">    tmp = a;</div><div class="line">    a += b;</div><div class="line">    b = tmp;</div><div class="line">  &#125;</div><div class="line">  return a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">document.write(fib(10));</div></pre></td></tr></table></figure></p>
 <ol>
 <li>表格<br><table><pre><code>&lt;tr&gt;
@@ -200,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1iu0c5100004kfbgxj5o4sz" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1iu556p0000mcfbragbxkoh" class="article-share-link">Share</a>
       
       
     </footer>
