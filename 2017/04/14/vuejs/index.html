@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/14/vuejs/index.html">
 <meta property="og:site_name" content="Shevon's Blog">
 <meta property="og:description" content="摘要: vue入门编程">
-<meta property="og:updated_time" content="2017-04-16T11:26:14.479Z">
+<meta property="og:updated_time" content="2017-04-16T15:43:53.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vuejs">
 <meta name="twitter:description" content="摘要: vue入门编程">
@@ -95,29 +95,78 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>摘要: vue入门编程<br><a id="more"></a><br>正文:</p>
-<h1 id="vue-js是用于构建交互式的Web界面的库。"><a href="#vue-js是用于构建交互式的Web界面的库。" class="headerlink" title="vue.js是用于构建交互式的Web界面的库。"></a>vue.js是用于构建交互式的Web界面的库。</h1><h1 id="本章节是关于Vue1-x版本的内容"><a href="#本章节是关于Vue1-x版本的内容" class="headerlink" title="本章节是关于Vue1.x版本的内容"></a>本章节是关于Vue1.x版本的内容</h1><h2 id="vue-js特点"><a href="#vue-js特点" class="headerlink" title="vue.js特点"></a>vue.js特点</h2><p>1.简洁：HTML模板+JSON数据，再创建一个Vue实例<br>数据驱动：自动追踪依赖的模板表达式和计算属性<br>组件化：用解耦、可复用的组件来构造姐main。<br>轻量：~24kb min+gzip,无依赖<br>快速：精确有效的异步批量DOM更新<br>模块友好：通过NPM或Bower安装，无缝融入你的工作流<br>（可扩展的数据绑定机制、原生对象即模型<br>简洁明了的 API、组件化 UI 构建、多个轻量库搭配使用）<br><a href="http://vuejs.org/guide/installation.html" target="_blank" rel="external">vue.js 官网下载地址</a></p>
+<p><a href="http://www.runoob.com/w3cnote/vue-js-quickstart.html" target="_blank" rel="external">vue.js入门编程</a></p>
+<h1 id="vue-js是用于构建交互式的Web界面的库。"><a href="#vue-js是用于构建交互式的Web界面的库。" class="headerlink" title="vue.js是用于构建交互式的Web界面的库。"></a>vue.js是用于构建交互式的Web界面的库。</h1><h1 id="一-本章节是关于Vue1-x版本的内容"><a href="#一-本章节是关于Vue1-x版本的内容" class="headerlink" title="一.本章节是关于Vue1.x版本的内容"></a>一.本章节是关于Vue1.x版本的内容</h1><h2 id="一-vue-js特点"><a href="#一-vue-js特点" class="headerlink" title="(一)vue.js特点"></a>(一)vue.js特点</h2><ol>
+<li>简洁：HTML模板+JSON数据，再创建一个Vue实例</li>
+<li>数据驱动：自动追踪依赖的模板表达式和计算属性</li>
+<li>组件化：用解耦、可复用的组件来构造姐main。</li>
+<li>轻量：~24kb min+gzip,无依赖</li>
+<li>快速：精确有效的异步批量DOM更新</li>
+<li><p>模块友好：通过NPM或Bower安装，无缝融入你的工作流<br>（可扩展的数据绑定机制、原生对象即模型<br>简洁明了的 API、组件化 UI 构建、多个轻量库搭配使用）</p>
+</li>
+<li><p>相关链接<br><a href="http://vuejs.org/guide/installation.html" target="_blank" rel="external">vue.js 官网下载地址</a></p>
+</li>
+</ol>
 <p><a href="http://www.cnblogs.com/yueyue-love/p/6378767.html" target="_blank" rel="external">使用node.js安装Vue-cli</a></p>
-<p><a href="http://blog.csdn.net/sinat_29412671/article/details/53690658" target="_blank" rel="external">Vue搭建</a></p>
+<p><a href="http://blog.csdn.net/sinat_29412671/article/details/53690658" target="_blank" rel="external">十分钟搞定Vue搭建</a></p>
 <p><a href="http://www.cnblogs.com/ganmy/p/6029774.html" target="_blank" rel="external">vue.js开发环境搭建</a></p>
-<h3 id="vue-js是什么"><a href="#vue-js是什么" class="headerlink" title="vue.js是什么"></a>vue.js是什么</h3><p>vue(法语)即是view(英语)<br>vue.js是一套构建用户界面(view)的MVVM框架。<br>vue.js的核心库只关注视图层，并且非常容易学习，非常容易与其他库或者已有的项目整合。</p>
-<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>model 业务模型 用处：处理数据、提供数据<br>view 用户界面、用户视图</p>
-<h3 id="vue-js目的"><a href="#vue-js目的" class="headerlink" title="vue.js目的"></a>vue.js目的</h3><ol>
+<h2 id="（二）vue-js是什么"><a href="#（二）vue-js是什么" class="headerlink" title="（二）vue.js是什么"></a>（二）vue.js是什么</h2><p>vue(法语)即是view(英语)<br>vue.js是一套构建用户界面(view)的MVVM框架。<br>vue.js的核心库只关注视图层，并且非常容易学习，非常容易与其他库或者已有的项目整合。</p>
+<h2 id="（三）MVVM"><a href="#（三）MVVM" class="headerlink" title="（三）MVVM"></a>（三）MVVM</h2><p>model 业务模型 用处：处理数据、提供数据<br>view 用户界面、用户视图</p>
+<h2 id="（四）vue-js目的"><a href="#（四）vue-js目的" class="headerlink" title="（四）vue.js目的"></a>（四）vue.js目的</h2><ol>
 <li>解决数据绑定的问题</li>
 <li>vue.js框架生产的主要目的是为了开发大型单页面应用<br> Angular.js中对PC端支持比较良好的，但是对移动端的支持就一般，而vue.js主要支持移动端，也支持PC端</li>
 <li>支持组件化，也就是说将页面封装成若干个组件，采用积木式编程，这样使页面的复用达到最高。</li>
 </ol>
-<p>vue.js 特性</p>
-<ol>
+<h2 id="（五）-vue-js-特性"><a href="#（五）-vue-js-特性" class="headerlink" title="（五） vue.js 特性"></a>（五） vue.js 特性</h2><ol>
 <li>业务模块model中数据发生改变的时候，用户视图view也随之变化，用户视图view改变的时候，业务模型model中数据也发生变化。（双向数据绑定）</li>
 <li>组件化</li>
 <li>指令系统</li>
 <li>vue.js2.0开始支持虚拟DOM(vue.js1.0是操作真DOM) 虚拟DOM可以提升页面的刷新速度</li>
 </ol>
+<h2 id="（六）启动项目"><a href="#（六）启动项目" class="headerlink" title="（六）启动项目"></a>（六）启动项目</h2><p>进入工程目录，运行 npm run dev<br>打开浏览器：localhost:8080</p>
+<h2 id="（七）尝试编写"><a href="#（七）尝试编写" class="headerlink" title="（七）尝试编写"></a>（七）尝试编写</h2><p><a href="http://www.runoob.com/w3cnote/vue2-start-coding.html" target="_blank" rel="external">参考 Vue2.0新手入门—从环境搭建到发布</a></p>
+<h3 id="1-打开工程目录下的App-vue"><a href="#1-打开工程目录下的App-vue" class="headerlink" title="1. 打开工程目录下的App.vue"></a>1. 打开工程目录下的App.vue</h3><p>template（模板）写html,script写js,style写样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div id=&quot;app&quot;&gt;</div><div class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</div><div class="line">    &lt;router-view&gt;&lt;/router-view&gt;</div><div class="line">    &lt;h2&gt;&#123;&#123; msg &#125;&#125;&lt;/h2&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  name: &apos;app&apos;,</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">     msg: &apos;Hello Vue! Nice to meet you!&apos;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">#app &#123;</div><div class="line">  font-family: &apos;Avenir&apos;, Helvetica, Arial, sans-serif;</div><div class="line">  -webkit-font-smoothing: antialiased;</div><div class="line">  -moz-osx-font-smoothing: grayscale;</div><div class="line">  text-align: center;</div><div class="line">  color: #2c3e50;</div><div class="line">  margin-top: 60px;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-注意"><a href="#2-注意" class="headerlink" title="2. 注意"></a>2. 注意</h3><p>（1）一个组件智能有一个并列的div，可以这么写，所以复制官网示例的时候只要复制 div 里面的内容就好。<br>可以这么写:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">	&lt;div id=&quot;app&quot;&gt;</div><div class="line">		&lt;div id=&quot;app-in&quot;&gt;</div><div class="line">			something here</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<p>但不能这么写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">	&lt;div id=&quot;app&quot;&gt;</div><div class="line">		something here</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div id=&quot;app-in&quot;&gt;</div><div class="line">		something here</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div></pre></td></tr></table></figure>
+<p>（2）数据要写在return里面而不是像文档那样子写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	export default &#123;</div><div class="line">		data () &#123;</div><div class="line">			return &#123;</div><div class="line">				msg: &apos;Hello Vue!&apos;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>错误的写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">	message: &apos;Hello Vue!&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-玩玩？-组件"><a href="#3-玩玩？-组件" class="headerlink" title="3. (玩玩？)组件"></a>3. (玩玩？)组件</h3><p>在工程目录/src下创建component文件夹，并在component文件夹下创建一个firstcomponent.vue并写仿照App.vue的格式和前面学到的知识写一个组件。</p>
+<h2 id="（八）使用路由搭建单页应用"><a href="#（八）使用路由搭建单页应用" class="headerlink" title="（八）使用路由搭建单页应用"></a>（八）使用路由搭建单页应用</h2><ol>
+<li><p>之前已经通过命令安装了vue-router</p>
+<blockquote>
+<p>cnpm install vue-router –save</p>
+</blockquote>
+</li>
+<li><p>在webpack.config.js加入别名</p>
+<blockquote>
+<p>resolve: {</p>
+<pre><code>alias: {vue: &apos;vue/dist/vue.js&apos;}
+</code></pre><p>}</p>
+</blockquote>
+</li>
+<li><p>为什么要加alias配置项<br>独立构建vs运行时构建</p>
+<ul>
+<li>独立构建包括编译和支持 <em>template</em> 选项。它也依赖与浏览器的接口的存在，所以你不能使用它来为服务器端渲染。</li>
+<li>运行时构建不包括模板编译，不支持 <em>temolate</em>选项。运行时构建，可以用 <em>render</em> 选项，但它只在单文件组件中起作用，因为单文件组件的模板是在构建时预编译到 <em>render</em> 函数中，运行时构建只有独立构建大小的30%，只有16Kb min+gzip大小。</li>
+</ul>
+</li>
+</ol>
+<p>默认NPM包导出的是 <em>运行时</em> 的构建。为了使用独立构建，在webpack配置中添加下面的别名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">resolve: &#123;</div><div class="line">	alias: &#123;</div><div class="line">	  vue: &apos;vue/dist/vue.js&apos;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于Browserify,可以用 <em>aliasify</em></p>
+<blockquote>
+<p>不要用 _import Vue from ‘vue/dist/vue.js’  用一些工具或第三方库引入Vue,这可能会导致应用程序在同一时间加载运行时和独立构建并造成错误。</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1kmn5tl0003ecfbekjp3hhf" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1kpwh9t0001bwfbyexvbwsj" class="article-share-link">Share</a>
       
       
     </footer>
