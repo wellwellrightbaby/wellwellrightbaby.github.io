@@ -5,18 +5,18 @@
   
   <title>Shevon&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(">
+  <meta name="description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(v">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shevon's Blog">
 <meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/index.html">
 <meta property="og:site_name" content="Shevon's Blog">
-<meta property="og:description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(">
+<meta property="og:description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(v">
 <meta property="og:image" content="http://pic.baike.soso.com/p/20140421/20140421171052-1926181480.jpg">
-<meta property="og:updated_time" content="2017-04-18T14:48:44.578Z">
+<meta property="og:updated_time" content="2017-04-18T14:56:07.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shevon's Blog">
-<meta name="twitter:description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(">
+<meta name="twitter:description" content="[TOC] 一.bootstrap用到的技术 前台:html+css+js+jq/bs+ajax  后台:structs+spring+hiberate+mvc+jsp+sql   二.MVC简介MVC模式 浏览器 发送请求到 Servlet(Controller) Servlet  通过 JavaBean(Model) 调用Model的方法 再回到Servlet Servlet 通过视图页面(v">
 <meta name="twitter:image" content="http://pic.baike.soso.com/p/20140421/20140421171052-1926181480.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Shevon&#39;s Blog" type="application/atom+xml">
@@ -82,7 +82,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> [TOC]</p>
+        <p>[TOC]</p>
 <h2 id="一-bootstrap用到的技术"><a href="#一-bootstrap用到的技术" class="headerlink" title="一.bootstrap用到的技术"></a>一.bootstrap用到的技术</h2><ol>
 <li><p>前台:html+css+js+jq/bs+ajax</p>
 </li>
@@ -156,12 +156,13 @@
 <h4 id="3-响应式图像"><a href="#3-响应式图像" class="headerlink" title="3. 响应式图像"></a>3. 响应式图像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;img src=&quot;...&quot; class=&quot;img-responsive&quot; alt=&quot;响应式图像&quot;&gt;</div><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">.img-responsive &#123;</div><div class="line">  display: inline-block;//元素相对于它周围的内容以内联形式呈现</div><div class="line">  height: auto;</div><div class="line">  max-width: 100%;</div><div class="line">  //设置 height:auto，相关元素的高度取决于浏览器。</div><div class="line">  //设置 max-width 为 100% 会重写任何通过 width 属性指定的宽度。这让图片对响应式布局的支持更友好。</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
 <h4 id="4-全局显示、排版和链接"><a href="#4-全局显示、排版和链接" class="headerlink" title="4.全局显示、排版和链接"></a>4.全局显示、排版和链接</h4><p>基本的全局显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">  font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;</div><div class="line">  font-size: 14px;</div><div class="line">  line-height: 1.428571429;</div><div class="line">  color: #333333;</div><div class="line">  background-color: #ffffff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>排版<br>使用 @font-family-base、 @font-size-base 和 @line-height-base 属性作为排版样式</p>
-<p>链接样式<br>通过属性 @link-color 设置全局链接的颜色。<br>对于链接的默认样式，如下设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">a:hover,</div><div class="line">a:focus &#123;</div><div class="line">  color: #2a6496;</div><div class="line">  text-decoration: underline;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a:focus &#123;</div><div class="line">  outline: thin dotted #333;</div><div class="line">  outline: 5px auto -webkit-focus-ring-color;</div><div class="line">  outline-offset: -2px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+<p>链接样式<br>通过属性 @link-color 设置全局链接的颜色。<br>对于链接的默认样式，如下设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">a:hover,</div><div class="line">a:focus &#123;</div><div class="line">  color: #2a6496;</div><div class="line">  text-decoration: underline;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a:focus &#123;</div><div class="line">  outline: thin dotted #333;</div><div class="line">  outline: 5px auto -webkit-focus-ring-color;</div><div class="line">  outline-offset: -2px;</div><div class="line">&#125;</div><div class="line">//所以，当鼠标悬停在链接上，或者点击过的链接，颜色会被设置为 #2a6496。同时，会呈现一条下划线。</div><div class="line">//除此之外，点击过的链接，会呈现一个颜色码为 #333 的细的虚线轮廓。另一条规则是设置轮廓为 5 像素宽，且对于基于 webkit 浏览器有一个 -webkit-focus-ring-color 的浏览器扩展。轮廓偏移设置为 -2 像素。</div><div class="line">//以上所有这些样式都可以在 scaffolding.less 中找到。</div></pre></td></tr></table></figure></p>
+<h4 id="5-避免跨浏览器的不一致"><a href="#5-避免跨浏览器的不一致" class="headerlink" title="5.避免跨浏览器的不一致"></a>5.避免跨浏览器的不一致</h4><p>Bootstrap 使用 Normalize 来建立跨浏览器的一致性。<br>Normalize.css 是一个很小的 CSS 文件，在 HTML 元素的默认样式中提供了更好的跨浏览器一致性。</p>
+<h4 id="6-容器-Container"><a href="#6-容器-Container" class="headerlink" title="6.容器(Container)"></a>6.容器(Container)</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1no1k1s0000eofbrizvhdxz" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1no9gxd000030fbraot4uy5" class="article-share-link">Share</a>
       
       
     </footer>
