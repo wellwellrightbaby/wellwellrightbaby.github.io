@@ -164,7 +164,7 @@
 <h4 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h4><p>Bootstrap 中的媒体查询允许您基于视口大小移动、显示并隐藏内容。<br>下面的媒体查询在 LESS 文件中使用，用来创建 Bootstrap 网格系统中的关键的分界点阈值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/* 超小设备（手机，小于 768px） */</div><div class="line">/* Bootstrap 中默认情况下没有媒体查询 */</div><div class="line"></div><div class="line">/* 小型设备（平板电脑，768px 起） */</div><div class="line">@media (min-width: @screen-sm-min) &#123; ... &#125;</div><div class="line"></div><div class="line">/* 中型设备（台式电脑，992px 起） */</div><div class="line">@media (min-width: @screen-md-min) &#123; ... &#125;</div><div class="line"></div><div class="line">/* 大型设备（大台式电脑，1200px 起） */</div><div class="line">@media (min-width: @screen-lg-min) &#123; ... &#125;</div></pre></td></tr></table></figure></p>
 <p>媒体查询有两个部分，先是一个设备规范，然后是一个大小规则。在上面的案例中，设置了下列的规则：<br>让我们来看下面这行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) &#123; ... &#125;</div></pre></td></tr></table></figure></p>
 <h4 id="网格选项"><a href="#网格选项" class="headerlink" title="网格选项"></a>网格选项</h4><p>下表总结了 Bootstrap 网格系统如何跨多个设备工作：</p>
-<table><br>    <tr><th></th><th>超小设备手机（<768px）< th=""><th>小型设备平板电脑（≥768px）</th><th>中型设备台式电脑（≥992px）</th><th>大型设备台式电脑（≥1200px）</th></768px）<></th></tr><br>    <tr><td>网格行为</td><td>一直是水平的</td><td>以折叠开始，断点以上是水平的</td><td>以折叠开始，断点以上是水平的</td><td>以折叠开始，断点以上是水平的</td></tr><br>    <tr><td>最大容器宽度</td><td>None(auto)</td><td>750px</td><td>970px</td><td>1170px</td></tr><br>    <tr><td>Class前缀</td><td>.col-xs-</td><td>.col-sm-</td><td>.col-md-</td><td>.col-lg-</td></tr><br>    <tr><td>列数量和</td><td>12</td><td>12</td><td>12</td><td>12</td></tr><br>    <tr><td>最大列宽</td><td>Auto</td><td>60px</td><td>78px</td><td>95px</td></tr><br>    <tr><td>间隙宽度</td><td>30px<br>（一个列的每边分别 15px）</td><td>30px<br>（一个列的每边分别 15px）</td><td>30px<br>（一个列的每边分别 15px）</td><td>30px<br>（一个列的每边分别 15px）</td></tr><br>    <tr><td>可嵌套</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br>    <tr><td>偏移量</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br>    <tr><td>列排序</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br></table>
+<table><br>    <tr><th>&nbsp;</th><th>超小设备手机（768px)</th><th>小型设备平板电脑（≥768px）</th><th>中型设备台式电脑（≥992px）</th><th>大型设备台式电脑（≥1200px）</th></tr><br>    <tr><td>网格行为</td><td>一直是水平的</td><td>以折叠开始，断点以上是水平的</td><td>以折叠开始，断点以上是水平的</td><td>以折叠开始，断点以上是水平的</td></tr><br>    <tr><td>最大容器宽度</td><td>None(auto)</td><td>750px</td><td>970px</td><td>1170px</td></tr><br>    <tr><td>Class前缀</td><td>.col-xs-</td><td>.col-sm-</td><td>.col-md-</td><td>.col-lg-</td></tr><br>    <tr><td>列数量和</td><td>12</td><td>12</td><td>12</td><td>12</td></tr><br>    <tr><td>最大列宽</td><td>Auto</td><td>60px</td><td>78px</td><td>95px</td></tr><br>    <tr><td>间隙宽度</td><td>30px（一个列的每边分别 15px）</td><td>30px（一个列的每边分别 15px）</td><td>30px（一个列的每边分别 15px）</td><td>30px（一个列的每边分别 15px）</td></tr><br>    <tr><td>可嵌套</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br>    <tr><td>偏移量</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br>    <tr><td>列排序</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><br></table>
 
 
 <h4 id="基本的网格结构"><a href="#基本的网格结构" class="headerlink" title="基本的网格结构"></a>基本的网格结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">   &lt;div class=&quot;row&quot;&gt;</div><div class="line">      &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;</div><div class="line">      &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;      </div><div class="line">   &lt;/div&gt;</div><div class="line">   &lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;container&quot;&gt;....</div></pre></td></tr></table></figure>
@@ -173,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1oip5fs0000ogfbomcv1wmi" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1oj3gvy0000egfbk9mlmipl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1oip5iq000fogfbgabcu98j" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1oj3gwg0002egfbtyerw48q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -263,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj1oip5je000jogfbf29w6x99" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj1oj3gx00007egfb6l0mujwv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1oip5h10002ogfblkb913fz" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1oj3gwy0006egfbfrz3qoef" class="article-share-link">Share</a>
       
       
     </footer>
@@ -353,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj1oip5hs0006ogfbdszh1iwn" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj1oj3gx8000cegfb4v7kqvij" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj1oip5gv0001ogfbl4c8yjg2" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj1oj3gws0004egfblagx5n06" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
@@ -441,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj1oip5hj0004ogfb3jlllcph" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj1oj3gx4000aegfbqweicm1k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -486,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/hello-world/" data-id="cj1oip5ja000iogfbdjn9i9yi" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/hello-world/" data-id="cj1oj3gw70001egfbs5sigcls" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
