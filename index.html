@@ -168,12 +168,14 @@
 
 
 <h4 id="基本的网格结构"><a href="#基本的网格结构" class="headerlink" title="基本的网格结构"></a>基本的网格结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">   &lt;div class=&quot;row&quot;&gt;</div><div class="line">      &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;</div><div class="line">      &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;      </div><div class="line">   &lt;/div&gt;</div><div class="line">   &lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;container&quot;&gt;....</div></pre></td></tr></table></figure>
-<p><a href="http://www.runoob.com/bootstrap/bootstrap-grid-system.html" target="_blank" rel="external">http://www.runoob.com/bootstrap/bootstrap-grid-system.html</a></p>
+<h5 id="网格系统实例：堆叠的水平"><a href="#网格系统实例：堆叠的水平" class="headerlink" title="网格系统实例：堆叠的水平"></a>网格系统实例：堆叠的水平</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">		&lt;div class=&quot;row&quot;&gt;</div><div class="line">			&lt;div class=&quot;col-md-4&quot;&gt;hello&lt;/div&gt;</div><div class="line">			&lt;div class=&quot;col-md-2&quot;&gt;hello&lt;/div&gt;</div><div class="line">			&lt;div class=&quot;col-md-6&quot;&gt;hello&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h5 id="网格系统实例：中型和大型设备"><a href="#网格系统实例：中型和大型设备" class="headerlink" title="网格系统实例：中型和大型设备"></a>网格系统实例：中型和大型设备</h5><p>现在 Bootstrap 在中型设备中，会查找带有 md 的类，并使用它们。在大型设备中，会查找带有 lg 的类，并使用它们。在本实例中，我们的 2 个 div 将从 50%/50% 分割转变为 33%/66%。请查看下面的实例进行验证。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">		&lt;div class=&quot;row&quot;&gt;</div><div class="line">			&lt;div class=&quot;col-md-6 col-lg-4&quot;&gt;&lt;p&gt;hello&lt;/p&gt;</div><div class="line">				&lt;p&gt;hello&lt;/p&gt;&lt;/div&gt;</div><div class="line">			&lt;div class=&quot;col-md-6 col-lg-8&quot;&gt; &lt;p&gt;hello&lt;/p&gt;</div><div class="line">				&lt;p&gt;hello&lt;/p&gt;&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h5 id="网格系统实例：手机、平板电脑、台式电脑"><a href="#网格系统实例：手机、平板电脑、台式电脑" class="headerlink" title="网格系统实例：手机、平板电脑、台式电脑"></a>网格系统实例：手机、平板电脑、台式电脑</h5><p>在手机上，它将是左边 25% 右边 75% 的布局。在平板电脑上，它将是 50%/50% 的布局。在大型视口的设备上，它将是 33%/66% 的布局。请查看下面的实例进行验证。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">		&lt;div class=&quot;row&quot;&gt;</div><div class="line">			&lt;div class=&quot;col-sm-3 col-md-6 col-lg-4&quot;&gt;&lt;p&gt;hello&lt;/p&gt;</div><div class="line">				&lt;p&gt;hello&lt;/p&gt;&lt;/div&gt;</div><div class="line">			&lt;div class=&quot;col-sm-9 col-md-6 col-lg-8&quot;&gt; &lt;p&gt;hello&lt;/p&gt;</div><div class="line">				&lt;p&gt;hello&lt;/p&gt;&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1oj3gvy0000egfbk9mlmipl" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1or20vg0000fsfb7g4yi8of" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1oj3gwg0002egfbtyerw48q" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1or20ws0002fsfbwmbwdf49" class="article-share-link">Share</a>
       
       
     </footer>
@@ -263,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj1oj3gx00007egfb6l0mujwv" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj1or210f000ifsfbaj7daw35" class="article-share-link">Share</a>
       
       
     </footer>
@@ -308,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1oj3gwy0006egfbfrz3qoef" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1or20yy000ffsfb3015mv8x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -353,7 +355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj1oj3gx8000cegfb4v7kqvij" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj1or20xa0004fsfb7axpk7qm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj1oj3gws0004egfblagx5n06" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj1or20vs0001fsfb0owaufyf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
@@ -441,7 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj1oj3gx4000aegfbqweicm1k" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj1or20y50006fsfbllr5dmxu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -486,7 +488,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/hello-world/" data-id="cj1oj3gw70001egfbs5sigcls" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/hello-world/" data-id="cj1or211f000kfsfbf730qeah" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
