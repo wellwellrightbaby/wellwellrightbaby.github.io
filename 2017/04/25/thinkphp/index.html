@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/index.html">
 <meta property="og:site_name" content="Shevon's Blog">
 <meta property="og:description" content="摘要:thinkphp">
-<meta property="og:updated_time" content="2017-04-25T00:50:35.520Z">
+<meta property="og:updated_time" content="2017-04-25T02:42:42.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThinkPhp">
 <meta name="twitter:description" content="摘要:thinkphp">
@@ -184,11 +184,112 @@
 <p>‘DEFAULT_C_LAYER’       =&gt;  ‘Event’, // 默认的控制器层名称改为Event<br>所以是和外部隔离的。</p>
 <p>多层控制器的划分也不是强制的，可以根据应用的需要自由分层。控制器分层里面可以根据需要调用分层模型，也可以调用不同的分层视图（主题）。</p>
 <p>在MVC三层中，ThinkPHP并不依赖M或者V，甚至可以只有C或者只有V，这个在ThinkPHP的设计里面是一个很重要的用户体验设计，用户只需要定义视图，在没有C的情况下也能自动识别。</p>
-<h5 id="类"><a href="#类" class="headerlink" title="类"></a>类</h5><h4 id="4-img"><a href="#4-img" class="headerlink" title="4.img"></a>4.img</h4><h4 id="5-图标"><a href="#5-图标" class="headerlink" title="5.图标"></a>5.图标</h4>
+<h2 id="八-模板"><a href="#八-模板" class="headerlink" title="八.模板"></a>八.模板</h2><h3 id="1-变量输出"><a href="#1-变量输出" class="headerlink" title="1.变量输出"></a>1.变量输出</h3><p><a href="http://www.kancloud.cn/manual/thinkphp/1794" target="_blank" rel="external">变量输出</a><br>非数组输出和数组输出</p>
+<h4 id="系统变量输出"><a href="#系统变量输出" class="headerlink" title="系统变量输出"></a>系统变量输出</h4><p>普通的模板变量需要首先赋值后才能在模板中输出，但是系统变量则不需要，可以直接在模板中输出，系统变量的输出通常以{$Think 打头，例如：</p>
+<p>{$Think.server.script_name} // 输出$_SERVER[‘SCRIPT_NAME’]变量<br>{$Think.session.user_id} // 输出$_SESSION[‘user_id’]变量<br>{$Think.get.pageNumber} // 输出$_GET[‘pageNumber’]变量<br>{$Think.cookie.name}  // 输出$_COOKIE[‘name’]变量<br>支持输出 $_SERVER、$_ENV、 $_POST、 $_GET、 $_REQUEST、$_SESSION和 $_COOKIE变量。</p>
+<h4 id="常量输出"><a href="#常量输出" class="headerlink" title="常量输出"></a>常量输出</h4><p>还可以输出常量</p>
+<p>{$Think.const.MODULE_NAME}<br>或者直接使用</p>
+<p>{$Think.MODULE_NAME}</p>
+<h4 id="配置输出"><a href="#配置输出" class="headerlink" title="配置输出"></a>配置输出</h4><p>输出配置参数使用：</p>
+<p>{$Think.config.db_charset}<br>{$Think.config.url_model}</p>
+<h4 id="语言变量"><a href="#语言变量" class="headerlink" title="语言变量"></a>语言变量</h4><p>输出语言变量可以使用：</p>
+<p>{$Think.lang.page_error}<br>{$Think.lang.var_error}</p>
+<h3 id="2-使用函数"><a href="#2-使用函数" class="headerlink" title="2.使用函数"></a>2.使用函数</h3><p>我们往往需要对模板输出变量使用函数，可以使用：</p>
+<p>{$data.name|md5}<br>编译后的结果是：</p>
+<p>&lt;?php echo (md5($data[‘name’])); ?&gt;<br>如果函数有多个参数需要调用，则使用：</p>
+<p>变量输出使用的函数可以支持内置的PHP函数或者用户自定义函数，甚至是静态方法。</p>
+<h3 id="3-标签库"><a href="#3-标签库" class="headerlink" title="3.标签库"></a>3.标签库</h3><h3 id="4-模板继承"><a href="#4-模板继承" class="headerlink" title="4.模板继承"></a>4.模板继承</h3><p>模板继承是一项更加灵活的模板布局方式，模板继承不同于模板布局，甚至来说，应该在模板布局的上层。模板继承其实并不难理解，就好比类的继承一样，模板也可以定义一个基础模板（或者是布局），并且其中定义相关的区块（block），然后继承（extend）该基础模板的子模板中就可以对基础模板中定义的区块进行重载。</p>
+<p>因此，模板继承的优势其实是设计基础模板中的区块（block）和子模板中替换这些区块。</p>
+<p>每个区块由<block></block>标签组成。 下面就是基础模板中的一个典型的区块设计（用于设计网站标题）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;block name=&quot;title&quot;&gt;&lt;title&gt;网站标题&lt;/title&gt;&lt;/block&gt;</div></pre></td></tr></table></figure>
+<p>block标签必须指定name属性来标识当前区块的名称，这个标识在当前模板中应该是唯一的，block标签中可以包含任何模板内容，包括其他标签和变量，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;block name=&quot;title&quot;&gt;&lt;title&gt;&#123;$web_title&#125;&lt;/title&gt;&lt;/block&gt;</div><div class="line">//你甚至还可以在区块中加载外部文件：</div><div class="line"></div><div class="line">&lt;block name=&quot;include&quot;&gt;&lt;include file=&quot;Public:header&quot; /&gt;&lt;/block&gt;</div><div class="line">//一个模板中可以定义任意多个名称标识不重复的区块，例如下面定义了一个base.html基础模板：</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</div><div class="line">&lt;block name=&quot;title&quot;&gt;&lt;title&gt;标题&lt;/title&gt;&lt;/block&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;block name=&quot;menu&quot;&gt;菜单&lt;/block&gt;</div><div class="line">&lt;block name=&quot;left&quot;&gt;左边分栏&lt;/block&gt;</div><div class="line">&lt;block name=&quot;main&quot;&gt;主内容&lt;/block&gt;</div><div class="line">&lt;block name=&quot;right&quot;&gt;右边分栏&lt;/block&gt;</div><div class="line">&lt;block name=&quot;footer&quot;&gt;底部&lt;/block&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>然后我们在子模板（其实是当前操作的入口模板）中使用继承：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;extend name=&quot;base&quot; /&gt;</div><div class="line">&lt;block name=&quot;title&quot;&gt;&lt;title&gt;&#123;$title&#125;&lt;/title&gt;&lt;/block&gt;</div><div class="line">&lt;block name=&quot;menu&quot;&gt;</div><div class="line">&lt;a href=&quot;/&quot; &gt;首页&lt;/a&gt;</div><div class="line">&lt;a href=&quot;/info/&quot; &gt;资讯&lt;/a&gt;</div><div class="line">&lt;a href=&quot;/bbs/&quot; &gt;论坛&lt;/a&gt;</div><div class="line">&lt;/block&gt;</div><div class="line">&lt;block name=&quot;left&quot;&gt;&lt;/block&gt;</div><div class="line">&lt;block name=&quot;content&quot;&gt;</div><div class="line">&lt;volist name=&quot;list&quot; id=&quot;vo&quot;&gt;</div><div class="line">&lt;a href=&quot;/new/&#123;$vo.id&#125;&quot;&gt;&#123;$vo.title&#125;&lt;/a&gt;&lt;br/&gt;</div><div class="line"> &#123;$vo.content&#125;</div><div class="line">&lt;/volist&gt;</div><div class="line">&lt;/block&gt;</div><div class="line">&lt;block name=&quot;right&quot;&gt;</div><div class="line"> 最新资讯：</div><div class="line">&lt;volist name=&quot;news&quot; id=&quot;new&quot;&gt;</div><div class="line">&lt;a href=&quot;/new/&#123;$new.id&#125;&quot;&gt;&#123;$new.title&#125;&lt;/a&gt;&lt;br/&gt;</div><div class="line">&lt;/volist&gt;</div><div class="line">&lt;/block&gt;</div><div class="line">&lt;block name=&quot;footer&quot;&gt;</div><div class="line"> @ThinkPHP2012 版权所有</div><div class="line">&lt;/block&gt;</div></pre></td></tr></table></figure>
+<p>可以看到，子模板中使用了extend标签定义需要继承的模板，extend标签的用法和include标签一样，你也可以加载其他模板：</p>
+<p><extend name="Public:base"><br>或者使用绝对文件路径加载</extend></p>
+<p><extend name="./Template/Public/base.html"><br>在当前子模板中，只能定义区块而不能定义其他的模板内容，否则将会直接忽略，并且只能定义基础模板中已经定义的区块。</extend></p>
+<p>例如，如果采用下面的定义：</p>
+<p><block name="title"><title>{$title}</title></block><br><a href="/">首页</a><br><a href="/info/">资讯</a><br><a href="/bbs/">论坛</a><br>导航部分将是无效的，不会显示在模板中。</p>
+<p>在子模板中，可以对基础模板中的区块进行重载定义，如果没有重新定义的话，则表示沿用基础模板中的区块定义，如果定义了一个空的区块，则表示删除基础模板中的该区块内容。 上面的例子，我们就把left区块的内容删除了，其他的区块都进行了重载。</p>
+<p>子模板中的区块定义顺序是随意的，模板继承的用法关键在于基础模板如何布局和设计规划了，如果结合原来的布局功能，则会更加灵活。</p>
+<h3 id="5-包含文件"><a href="#5-包含文件" class="headerlink" title="5.包含文件"></a>5.包含文件</h3><p>在当前模版文件中包含其他的模版文件使用include标签，标签用法：</p>
+<include file="模版表达式或者模版文件1,模版表达式或者模版文件2,...">
+
+<h4 id="使用模版表达式"><a href="#使用模版表达式" class="headerlink" title="使用模版表达式"></a>使用模版表达式</h4><p>模版表达式的定义规则为：模块@主题/控制器/操作</p>
+<p>例如：</p>
+<p><include file="Public/header"> // 包含头部模版header</include></p>
+<p><include file="Public/menu"> // 包含菜单模版menu</include></p>
+<p><include file="Blue/Public/menu"> // 包含blue主题下面的menu模版<br>可以一次包含多个模版，例如：</include></p>
+<p><include file="Public/header,Public/menu"><br>注意，包含模版文件并不会自动调用控制器的方法，也就是说包含的其他模版文件中的变量赋值需要在当前操作中完成。</include></p>
+<h4 id="使用模版文件"><a href="#使用模版文件" class="headerlink" title="使用模版文件"></a>使用模版文件</h4><p>可以直接包含一个模版文件名（包含完整路径），例如：</p>
+<include file="./Application/Home/View/default/Public/header.html">
+
+<h4 id="传入参数"><a href="#传入参数" class="headerlink" title="传入参数"></a>传入参数</h4><p>无论你使用什么方式包含外部模板，Include标签支持在包含文件的同时传入参数，例如，下面的例子我们在包含header模板的时候传入了title和keywords变量：</p>
+<p><include file="Public/header" title="ThinkPHP框架" keywords="开源WEB开发框架"><br>就可以在包含的header.html文件里面使用title和keywords变量，如下：</include></p>
+<p><html xmlns="http://www.w3.org/1999/xhtml"></html></p>
+<p><head></head></p>
+<p><title>[title]</title></p>
+<p><meta name="keywords" content="[keywords]"><br><br>注意：由于模板解析的特点，从入口模板开始解析，如果外部模板有所更改，模板引擎并不会重新编译模板，除非在调试模式下或者缓存已经过期。如果部署模式下修改了包含的外部模板文件后，需要把模块的缓存目录清空，否则无法生效。</p>
+<h3 id="6-内置标签"><a href="#6-内置标签" class="headerlink" title="6.内置标签"></a>6.内置标签</h3><p><a href="http://www.kancloud.cn/manual/thinkphp/1804" target="_blank" rel="external">内置标签</a></p>
+<ul>
+<li><p>Volist标签<br>volist标签通常用于查询数据集（select方法）的结果输出，通常模型的select方法返回的结果是一个二维数组，可以直接使用volist标签进行输出。</p>
+</li>
+<li><p>Foreach标签<br>foreach标签类似与volist标签，只是更加简单，没有太多额外的属性</p>
+</li>
+<li><p>For标签<br>用法：</p>
+</li>
+</ul>
+<p><for start="开始值" end="结束值" comparison="" step="步进值" name="循环变量名"><br></for><br>开始值、结束值、步进值和循环变量都可以支持变量，开始值和结束值是必须，其他是可选。comparison 的默认值是lt；name的默认值是i，步进值的默认值是1</p>
+<ul>
+<li>Switch标签</li>
+</ul>
+<ul>
+<li>比较标签<br>比较标签用于简单的变量比较，复杂的判断条件可以用if标签替换，比较标签是一组标签的集合</li>
+</ul>
+<ul>
+<li><p>范围判断标签<br>范围判断标签包括in notin between notbetween四个标签，都用于判断变量是否中某个范围。</p>
+</li>
+<li><p>IF标签<br>由于if标签的condition属性里面基本上使用的是php语法，尽可能使用判断标签和Switch标签会更加简洁，原则上来说，能够用switch和比较标签解决的尽量不用if标签完成。</p>
+</li>
+<li><p>Present标签<br>present标签用于判断某个变量是否已经定义</p>
+</li>
+<li><p>Empty标签<br>empty标签用于判断某个变量是否为空</p>
+</li>
+<li><p>Defined标签<br>DEFINED标签用于判断某个常量是否有定义</p>
+</li>
+<li><p>Assign标签<br>ASSIGN标签用于在模板文件中赋值变量，用法如下：</p>
+</li>
+</ul>
+<p><assign name="var" value="123"><br>在运行模板的时候，赋值了一个var的变量，值是123。</assign></p>
+<ul>
+<li>Define标签<br>DEFINE标签用于中模板中定义常量，用法如下：</li>
+</ul>
+<p><define name="MY_DEFINE_NAME" value="3"><br>在运行模板的时候，就会定义一个MY_DEFINE_NAME的常量。</define></p>
+<ul>
+<li>标签嵌套<br>模板引擎支持标签的多层嵌套功能，可以对标签库的标签指定可以嵌套。</li>
+</ul>
+<p>系统内置的标签中，volist、switch、if、elseif、else、foreach、compare（包括所有的比较标签）、（not）present、（not）empty、（not）defined等标签都可以嵌套使用。例如：</p>
+<p><volist name="list" id="vo"><br>    <volist name="vo['sub']" id="sub"><br>        {$sub.name}<br>    </volist><br></volist><br>上面的标签可以用于输出双重循环。</p>
+<p>嵌套层次是由标签库中的标签定义的时候的level属性决定的。</p>
+<ul>
+<li><p>import标签</p>
+</li>
+<li><p>使用PHP代码</p>
+</li>
+</ul>
+<h3 id="7-原样输出"><a href="#7-原样输出" class="headerlink" title="7.原样输出"></a>7.原样输出</h3><h3 id="8-模板注释"><a href="#8-模板注释" class="headerlink" title="8.模板注释"></a>8.模板注释</h3><h3 id="9-模板布局"><a href="#9-模板布局" class="headerlink" title="9.模板布局"></a>9.模板布局</h3><h3 id="10-模板替换"><a href="#10-模板替换" class="headerlink" title="10.模板替换"></a>10.模板替换</h3><p>在进行模板渲染之前，系统还会对读取的模板内容进行一些特殊字符串替换操作，也就是实现了模板输出的替换和过滤。该替换操作仅针对内置的模版引擎。</p>
+<p>这个机制可以使得模板文件的定义更加方便，默认的替换规则有：</p>
+<p><strong>ROOT</strong>： 会替换成当前网站的地址（不含域名）<br><strong>APP</strong>： 会替换成当前应用的URL地址 （不含域名）<br><strong>MODULE</strong>：会替换成当前模块的URL地址 （不含域名）<br><strong>CONTROLLER</strong>（<strong>或者</strong>URL<strong> 兼容考虑）： 会替换成当前控制器的URL地址（不含域名）
+</strong>ACTION<strong>：会替换成当前操作的URL地址 （不含域名）
+</strong>SELF<strong>： 会替换成当前的页面URL
+</strong>PUBLIC__：会被替换成当前网站的公共目录 通常是 /Public/<br>默认情况下，模板替换只会替换模板文件的特殊字符串，不会替换动态数据中的输出的内容。</p>
+</include></include>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj1wu54kt0006v0fb6ogvor10" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj1yonlec000gccfb6gpx85pm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,6 +307,11 @@
       </div>
     </a>
   
+  
+    <a href="/2017/04/26/ThinkPhp3.1快速入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ThinkPhp3.1快速入门</div>
+    </a>
   
 </nav>
 
@@ -262,6 +368,10 @@
       <ul>
         
           <li>
+            <a href="/2017/04/26/ThinkPhp3.1快速入门/">ThinkPhp3.1快速入门</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/25/thinkphp/">ThinkPhp</a>
           </li>
         
@@ -275,10 +385,6 @@
         
           <li>
             <a href="/2017/04/15/yueqian/">yueqian</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/14/vuejs/">vuejs</a>
           </li>
         
       </ul>
