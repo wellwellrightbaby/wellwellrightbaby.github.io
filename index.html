@@ -68,6 +68,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-myPhpWork" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/30/myPhpWork/" class="article-date">
+  <time datetime="2017-04-30T06:40:22.103Z" itemprop="datePublished">2017-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于a link是disabled属性设置成true,只是颜色变灰色但是还能提交.要想不能提交,可以删除href属性:<br>disable link<br>[html] view plaincopy<br>function disableLink(link) {<br>    //link.disabled = true;<br>    link.setAttribute(“disabled”,true);<br>    link.removeAttribute(‘href’);<br>}  </p>
+<p>role=”presentation”<br> role是标签扮演的角色属性,更多的是注明作用,对css样式没影响。可能对js事件有影响</p>
+<p> :focus 选择器用于选取获得焦点的元素。<br>提示：接收键盘事件或其他用户输入的元素都允许 :focus 选择器。</p>
+<p>a:link {color: #FF0000}     /<em> 未访问的链接 </em>/<br>a:focus {color: #00FF00}  /<em> 获得焦点的链接 </em>/</p>
+<p><a href="http://blog.chinaunix.net/uid-20672803-id-3049747.html" target="_blank" rel="external">MySQL数据插入、修改、删除 </a></p>
+<p><a href="http://www.cnblogs.com/cyrfr/p/6532928.html" target="_blank" rel="external">ThinkPhp框架的数据库操作（查询）</a></p>
+<p><a href="http://www.cnblogs.com/cyrfr/p/6530447.html" target="_blank" rel="external">ThinkPhp知识大全（非常详细）</a></p>
+<p>进入文件呢，其实是要酱紫进的哦<br><a href="http://localhost/menu/index.php/Home/Menu" target="_blank" rel="external">http://localhost/menu/index.php/Home/Menu</a><br>举个栗子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;h_nav h_nav-tabs&quot;&gt;</div><div class="line">        &lt;li&gt;&lt;h4 style=&quot;color:white&quot;&gt;hello&lt;/h4&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/Menu&quot;&gt;菜单&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/RoomBook&quot;&gt;包间预定&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/OnesMenu&quot;&gt;菜谱定制&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/AboutUs&quot;&gt;关于我们&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<p>【数据查询】</p>
+<p>select()是数据模型的一个指定方法，可以获得数据表的数据信息</p>
+<pre><code>返回一个二维数组信息，当前数据表的全部数据信息
+</code></pre><p>$obj = D();  创建对象</p>
+<p>$obj -&gt; select();  查询数据</p>
+<p>select  字段，字段  from  表名  where 条件  group 字段 having  条件   order 排序  limit 限制条数;</p>
+<p>SELECT%DISTINCT%%FIELD%FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%%LIMIT% %UNION%%COMMENT%</p>
+<p>$obj -&gt;field(字段，字段);  查询指定字段</p>
+<p>$obj -&gt;table(数据表);   设置具体操作数据表</p>
+<p>$obj -&gt;where(参数);   参数就是正常sql语句where后边的条件信息</p>
+<p>例如：( “goods_price &gt;100 and  goods_name like ‘三%’”)</p>
+<p>$obj -&gt;group(字段);  根据字段进行分组查询</p>
+<p>$obj -&gt;having(参数条件);  having 条件设置</p>
+<p>$obj -&gt;order(‘price  desc/asc’)  排序查询</p>
+<p>$obj -&gt;limit([偏移量，]条数)  限制查询的条数</p>
+<p>输出表中所有数据<br>&lt;?php    var_dump($umdata);  ?&gt;</p>
+<p>输出单个数据表的时候注意全部小写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;volist name=&quot;umdata&quot; id=&quot;umvo&quot;&gt;</div><div class="line">        &#123;$umvo.userid&#125;--&#123;$umvo.username&#125;--&#123;$umvo.userpass&#125;--&#123;$umvo.usertelephone&#125;--&#123;$umvo.uservip&#125;--&#123;$umvo.userphotos&#125;</div><div class="line">        &lt;br/&gt;</div><div class="line">    &lt;/volist&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/30/myPhpWork/" data-id="cj2bgshiw00032cfbyzxx54oy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-ThinkPhp3.1快速入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/26/ThinkPhp3.1快速入门/" class="article-date">
@@ -103,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj1yonlbe0000ccfbre4g78lf" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj2bgshh900002cfb8pv5yqsd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj1yonlec000gccfb6gpx85pm" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj2bgshjl00072cfbrvmqowt4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj1yonlek000jccfbui0h41r9" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj2bgsho1000e2cfb28ki22xa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj1yonlbw0001ccfbcf42ae9x" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj2bgshj700052cfbfnljcn5e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj1yonldv0009ccfbcd611i5a" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj2bgshq7000k2cfbf4z303xc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -328,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj1yonle8000fccfb68egi6a1" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj2bgshpy000i2cfbaaj4j6lj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +424,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj1yonle2000cccfbc4i0l1uf" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj2bgshpt000h2cfby7f61udb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -414,7 +465,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj1yonlda0006ccfb8kwwgdq7" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj2bgshj200042cfb4iwqkord" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
@@ -461,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj1yonldy000accfbpbxs60ka" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj2bgshqh000l2cfbgpofhj22" class="article-share-link">Share</a>
       
       
     </footer>
@@ -471,54 +522,11 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/12/hello-world/" class="article-date">
-  <time datetime="2017-04-12T02:11:14.578Z" itemprop="datePublished">2017-04-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/hello-world/" data-id="cj1yonldi0007ccfbvh9jsyi4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -569,6 +577,10 @@
       <ul>
         
           <li>
+            <a href="/2017/04/30/myPhpWork/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/26/ThinkPhp3.1快速入门/">ThinkPhp3.1快速入门</a>
           </li>
         
@@ -582,10 +594,6 @@
         
           <li>
             <a href="/2017/04/15/geshi/">geshi</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/15/yueqian/">yueqian</a>
           </li>
         
       </ul>

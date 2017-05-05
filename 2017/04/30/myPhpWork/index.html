@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shevon&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="由于a link是disabled属性设置成true,只是颜色变灰色但是还能提交.要想不能提交,可以删除href属性:disable link[html] view plaincopyfunction disableLink(link) {    //link.disabled = true;    link.setAttribute(“disabled”,true);    link.remov">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shevon's Blog">
+<meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/30/myPhpWork/index.html">
+<meta property="og:site_name" content="Shevon's Blog">
+<meta property="og:description" content="由于a link是disabled属性设置成true,只是颜色变灰色但是还能提交.要想不能提交,可以删除href属性:disable link[html] view plaincopyfunction disableLink(link) {    //link.disabled = true;    link.setAttribute(“disabled”,true);    link.remov">
+<meta property="og:updated_time" content="2017-05-05T06:32:00.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shevon's Blog">
+<meta name="twitter:description" content="由于a link是disabled属性设置成true,只是颜色变灰色但是还能提交.要想不能提交,可以删除href属性:disable link[html] view plaincopyfunction disableLink(link) {    //link.disabled = true;    link.setAttribute(“disabled”,true);    link.remov">
+  
+    <link rel="alternate" href="/atom.xml" title="Shevon&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Shevon&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Fighting in my all life</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wellwellrightbaby.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-myPhpWork" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/30/myPhpWork/" class="article-date">
+  <time datetime="2017-04-30T06:40:22.103Z" itemprop="datePublished">2017-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于a link是disabled属性设置成true,只是颜色变灰色但是还能提交.要想不能提交,可以删除href属性:<br>disable link<br>[html] view plaincopy<br>function disableLink(link) {<br>    //link.disabled = true;<br>    link.setAttribute(“disabled”,true);<br>    link.removeAttribute(‘href’);<br>}  </p>
+<p>role=”presentation”<br> role是标签扮演的角色属性,更多的是注明作用,对css样式没影响。可能对js事件有影响</p>
+<p> :focus 选择器用于选取获得焦点的元素。<br>提示：接收键盘事件或其他用户输入的元素都允许 :focus 选择器。</p>
+<p>a:link {color: #FF0000}     /<em> 未访问的链接 </em>/<br>a:focus {color: #00FF00}  /<em> 获得焦点的链接 </em>/</p>
+<p><a href="http://blog.chinaunix.net/uid-20672803-id-3049747.html" target="_blank" rel="external">MySQL数据插入、修改、删除 </a></p>
+<p><a href="http://www.cnblogs.com/cyrfr/p/6532928.html" target="_blank" rel="external">ThinkPhp框架的数据库操作（查询）</a></p>
+<p><a href="http://www.cnblogs.com/cyrfr/p/6530447.html" target="_blank" rel="external">ThinkPhp知识大全（非常详细）</a></p>
+<p>进入文件呢，其实是要酱紫进的哦<br><a href="http://localhost/menu/index.php/Home/Menu" target="_blank" rel="external">http://localhost/menu/index.php/Home/Menu</a><br>举个栗子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;h_nav h_nav-tabs&quot;&gt;</div><div class="line">        &lt;li&gt;&lt;h4 style=&quot;color:white&quot;&gt;hello&lt;/h4&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/Menu&quot;&gt;菜单&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/RoomBook&quot;&gt;包间预定&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/OnesMenu&quot;&gt;菜谱定制&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;/menu/index.php/Home/AboutUs&quot;&gt;关于我们&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div></pre></td></tr></table></figure></p>
+<p>【数据查询】</p>
+<p>select()是数据模型的一个指定方法，可以获得数据表的数据信息</p>
+<pre><code>返回一个二维数组信息，当前数据表的全部数据信息
+</code></pre><p>$obj = D();  创建对象</p>
+<p>$obj -&gt; select();  查询数据</p>
+<p>select  字段，字段  from  表名  where 条件  group 字段 having  条件   order 排序  limit 限制条数;</p>
+<p>SELECT%DISTINCT%%FIELD%FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%%LIMIT% %UNION%%COMMENT%</p>
+<p>$obj -&gt;field(字段，字段);  查询指定字段</p>
+<p>$obj -&gt;table(数据表);   设置具体操作数据表</p>
+<p>$obj -&gt;where(参数);   参数就是正常sql语句where后边的条件信息</p>
+<p>例如：( “goods_price &gt;100 and  goods_name like ‘三%’”)</p>
+<p>$obj -&gt;group(字段);  根据字段进行分组查询</p>
+<p>$obj -&gt;having(参数条件);  having 条件设置</p>
+<p>$obj -&gt;order(‘price  desc/asc’)  排序查询</p>
+<p>$obj -&gt;limit([偏移量，]条数)  限制查询的条数</p>
+<p>输出表中所有数据<br>&lt;?php    var_dump($umdata);  ?&gt;</p>
+<p>输出单个数据表的时候注意全部小写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;volist name=&quot;umdata&quot; id=&quot;umvo&quot;&gt;</div><div class="line">        &#123;$umvo.userid&#125;--&#123;$umvo.username&#125;--&#123;$umvo.userpass&#125;--&#123;$umvo.usertelephone&#125;--&#123;$umvo.uservip&#125;--&#123;$umvo.userphotos&#125;</div><div class="line">        &lt;br/&gt;</div><div class="line">    &lt;/volist&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/30/myPhpWork/" data-id="cj2bgshiw00032cfbyzxx54oy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/26/ThinkPhp3.1快速入门/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ThinkPhp3.1快速入门
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bootstrap/">Bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ThinkPhp/">ThinkPhp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/日志/二级目录/">二级目录</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/格式/">格式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/粤嵌培训/">粤嵌培训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/30/myPhpWork/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/26/ThinkPhp3.1快速入门/">ThinkPhp3.1快速入门</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/25/thinkphp/">ThinkPhp</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/17/bootstrap/">Bootstrap</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/15/geshi/">geshi</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Shevon Liao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
