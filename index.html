@@ -68,6 +68,244 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/14/css/" class="article-date">
+  <time datetime="2017-05-14T10:53:30.776Z" itemprop="datePublished">2017-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>字体尺寸：假定当前默认字体尺寸是14px，n em即为14px字体尺寸的n倍</p>
+<p>高度单位ex:定义一条与字母x高度相同的线</p>
+<p>宽度单位ch:数字“0”的宽度</p>
+<p>相对长度单位rem。相对于根元素(即html元素)font-size计算值的倍数</p>
+<p>vw:相对于视口的宽度。视口被均分为100单位的vw。<br>如果视口的宽度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。</p>
+<p>vh:相对于视口的高度。视口被均分为100单位的vh。<br>如果视口的高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。</p>
+<p>vmax：相对于视口的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax。<br>如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为24mm，即(8x300)/100，因为宽度比高度要大，所以计算的时候相对于宽度。</p>
+<p>vmin:相对于视口的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vmin。<br>如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为高度比宽度要小，所以计算的时候相对于高度。</p>
+<p>cm：厘米（Centimeters）。绝对长度单位。<br>厘米（Centimeters）。绝对长度单位。<br>1in = 2.54cm = 25.4 mm = 101.6q = 72pt = 6pc = 96px</p>
+<p>mm:毫米（Millimeters）。绝对长度单位。</p>
+<p>in:英寸（Inches）。绝对长度单位。</p>
+<p>pt:点（Points）。绝对长度单位。</p>
+<p>pc:派卡（Picas）。绝对长度单位。相当于我国新四号铅字的尺寸。</p>
+<p>px:相对长度单位。像素（Pixels）。</p>
+<p>visibility 属性规定元素是否可见。<br>提示：即使不可见的元素也会占据页面上的空间。请使用 “display” 属性来创建不占据页面空间的不可见元素。</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a><image></image></h1><h2 id="image"><a href="#image" class="headerlink" title="image()"></a>image()</h2><h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><p>image() = image( [ [ <image> | <string> ]? , <color>? ]! )</color></string></image></p>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>image() 用于指定图像或者图像替代。允许作者这样做：<br>使用媒体片段（media fragments）裁减图像的部分区域;</p>
+<h2 id="image-set"><a href="#image-set" class="headerlink" title="image-set()"></a>image-set()</h2><h3 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h3><p>image-set() = image-set( <image-set-option># )</image-set-option></p>
+<p><image-set-option> = [ <image> | <string> ] <resolution></resolution></string></image></image-set-option></p>
+<h3 id="说明：-1"><a href="#说明：-1" class="headerlink" title="说明："></a>说明：</h3><p>image-set() 可以根据用户设备的分辨率匹配合适的图像。<br>为不同的设备分配合适得图像;</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a><gradient></gradient></h1><h2 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient()"></a>linear-gradient()</h2><h3 id="语法：-2"><a href="#语法：-2" class="headerlink" title="语法："></a>语法：</h3><p><linear-gradient> = linear-gradient([ [ <angle> | to <side-or-corner> ] ,]? <color-stop>[, <color-stop>]+)</color-stop></color-stop></side-or-corner></angle></linear-gradient></p>
+<p><side-or-corner> = [left | right] || [top | bottom]</side-or-corner></p>
+<p><color-stop> = <color> [ <length> | <percentage> ]?</percentage></length></color></color-stop></p>
+<h3 id="取值："><a href="#取值：" class="headerlink" title="取值："></a>取值：</h3><p>下述值用来表示渐变的方向，可以使用角度或者关键字来设置：</p>
+<p><angle>：<br>用角度值指定渐变的方向（或角度）。<br>to left：<br>设置渐变为从右到左。相当于: 270deg<br>to right：<br>设置渐变从左到右。相当于: 90deg<br>to top：<br>设置渐变从下到上。相当于: 0deg<br>to bottom：<br>设置渐变从上到下。相当于: 180deg。这是默认值，等同于留空不写。</angle></p>
+<p><color-stop> 用于指定渐变的起止颜色：</color-stop></p>
+<p><color>：<br>指定颜色。</color></p>
+<p><length>：<br>用长度值指定起止色位置。不允许负值</length></p>
+<p><percentage>：<br>用百分比指定起止色位置。</percentage></p>
+<h2 id="radial-gradient"><a href="#radial-gradient" class="headerlink" title="radial-gradient()"></a>radial-gradient()</h2><h3 id="语法：-3"><a href="#语法：-3" class="headerlink" title="语法："></a>语法：</h3><p><radial-gradient> = radial-gradient([ [ <shape> || <size> ] [ at <position> ]? , | at <position>, ]?<color-stop>[ , <color-stop> ]+)</color-stop></color-stop></position></position></size></shape></radial-gradient></p>
+<p><position> = [ <length>① | <percentage>① | left | center① | right ]? [ <length>② | <percentage>② | top | center② | bottom ]?</percentage></length></percentage></length></position></p>
+<p><shape> = circle | ellipse</shape></p>
+<p><size> = <extent-keyword> | [ <circle-size> || <ellipse-size> ]</ellipse-size></circle-size></extent-keyword></size></p>
+<p><extent-keyword> = closest-side | closest-corner | farthest-side | farthest-corner</extent-keyword></p>
+<p><circle-size> = <length></length></circle-size></p>
+<p><ellipse-size> = [ <length> | <percentage> ]{2}</percentage></length></ellipse-size></p>
+<p><shape-size> = <length> | <percentage></percentage></length></shape-size></p>
+<p><color-stop> = <color> [ <length> | <percentage> ]?</percentage></length></color></color-stop></p>
+<h3 id="取值：-1"><a href="#取值：-1" class="headerlink" title="取值："></a>取值：</h3><p><position> 确定圆心的位置。如果提供2个参数，第一个表示横坐标，第二个表示纵坐标；如果只提供一个，第二值默认为50%，即center</position></p>
+<p><percentage>①：<br>用百分比指定径向渐变圆心的横坐标值。可以为负值。</percentage></p>
+<p><length>①：<br>用长度值指定径向渐变圆心的横坐标值。可以为负值。<br>left：<br>设置左边为径向渐变圆心的横坐标值。<br>center①：<br>设置中间为径向渐变圆心的横坐标值。<br>right：<br>设置右边为径向渐变圆心的横坐标值。</length></p>
+<p><percentage>②：<br>用百分比指定径向渐变圆心的纵坐标值。可以为负值。</percentage></p>
+<p><length>②：<br>用长度值指定径向渐变圆心的纵坐标值。可以为负值。<br>top：<br>设置顶部为径向渐变圆心的纵坐标值。<br>center②：<br>设置中间为径向渐变圆心的纵坐标值。<br>bottom：<br>设置底部为径向渐变圆心的纵坐标值。</length></p>
+<p><shape> 确定圆的类型<br>circle：<br>指定圆形的径向渐变<br>ellipse：<br>指定椭圆形的径向渐变。</shape></p>
+<p><extent-keyword> circle | ellipse 都接受该值作为 size<br>closest-side：<br>指定径向渐变的半径长度为从圆心到离圆心最近的边<br>closest-corner：<br>指定径向渐变的半径长度为从圆心到离圆心最近的角<br>farthest-side：<br>指定径向渐变的半径长度为从圆心到离圆心最远的边<br>farthest-corner：<br>指定径向渐变的半径长度为从圆心到离圆心最远的角</extent-keyword></p>
+<p><circle-size> circle 接受该值作为 size</circle-size></p>
+<p><length>：<br>用长度值指定正圆径向渐变的半径长度。不允许负值。</length></p>
+<p><ellipse-size> ellipse 接受该值作为 size</ellipse-size></p>
+<p><length>：<br>用长度值指定椭圆径向渐变的横向或纵向半径长度。不允许负值。</length></p>
+<p><percentage>：<br>用百分比指定椭圆径向渐变的横向或纵向半径长度。不允许负值。</percentage></p>
+<p><color-stop> 用于指定渐变的起止颜色：</color-stop></p>
+<p><color>：<br>指定颜色。</color></p>
+<p><length>：<br>用长度值指定起止色位置。不允许负值</length></p>
+<p><percentage>：<br>用百分比指定起止色位置。不允许负值</percentage></p>
+<h2 id="repeating-linear-gradient"><a href="#repeating-linear-gradient" class="headerlink" title="repeating-linear-gradient()"></a>repeating-linear-gradient()</h2><p>用重复的线性渐变创建图像。<br>repeating-linear-gradient()的语法与linear-gradient()相同。</p>
+<h2 id="repeating-radial-gradient"><a href="#repeating-radial-gradient" class="headerlink" title="repeating-radial-gradient()"></a>repeating-radial-gradient()</h2><p>用重复的径向渐变创建图像。<br>repeating-radial-gradient()的语法与radial-gradient()相同。</p>
+<h2 id="outline"><a href="#outline" class="headerlink" title="outline"></a>outline</h2><p>定义和用法<br>outline-style 属性用于设置元素的整个轮廓的样式。样式不能是 none，否则轮廓不会出现。<br>outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。outline 属性设置元素周围的轮廓线。</p>
+<h2 id="HTML-DOM-getElementsByTagName-方法"><a href="#HTML-DOM-getElementsByTagName-方法" class="headerlink" title="HTML DOM getElementsByTagName() 方法"></a>HTML DOM getElementsByTagName() 方法</h2><p>返回带有指定标签名的对象的集合:<br>document.getElementsByTagName(“P”);<br>实例<br>创建一个按钮:<br>var btn=document.createElement(“BUTTON”);</p>
+<h2 id="HTML-DOM-appendChild-方法"><a href="#HTML-DOM-appendChild-方法" class="headerlink" title="HTML DOM appendChild() 方法"></a>HTML DOM appendChild() 方法</h2><p>appendChild() 方法可向节点的子节点列表的末尾添加新的子节点。<br>实例<br>添加列表项:<br>document.getElementById(“myList”).appendChild(newListItem);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&quot;myList1&quot;&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;ul id=&quot;myList2&quot;&gt;&lt;li&gt;Water&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;单击按钮将项目从一个列表移动到另一个列表中&lt;/p&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction()&#123;</div><div class="line">	var node=document.getElementById(&quot;myList2&quot;).lastChild;</div><div class="line">	document.getElementById(&quot;myList1&quot;).appendChild(node);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="HTML-DOM-setAttribute-方法"><a href="#HTML-DOM-setAttribute-方法" class="headerlink" title="HTML DOM setAttribute() 方法"></a>HTML DOM setAttribute() 方法</h2><p>定义和用法<br>setAttribute() 方法添加指定的属性，并为其赋指定的值。<br>如果这个指定的属性已存在，则仅设置/更改值。</p>
+<p>实例<br>设置 input 元素的 type 属性：<br>document.getElementsByTagName(“INPUT”)[0].setAttribute(“type”,”button”);</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/05/14/css/" data-id="cj2osqaom0000hsfbekcqig7x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jqueryhtml" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/11/jqueryhtml/" class="article-date">
+  <time datetime="2017-05-11T07:17:06.671Z" itemprop="datePublished">2017-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jquery-html"><a href="#jquery-html" class="headerlink" title="jquery html"></a>jquery html</h2><p>�������� - text()��html() �Լ� val()<br>��������ʵ�õ����� DOM ������ jQuery ������<br>text() - ���û򷵻���ѡԪ�ص��ı�����<br>html() - ���û򷵻���ѡԪ�ص����ݣ����� HTML ���ǣ�<br>val() - ���û򷵻ر����ֶε�ֵ</p>
+<p>��ȡ���� - attr()<br>jQuery attr() �������ڻ�ȡ����ֵ��<br>������������ʾ���λ��������� href ���Ե�ֵ��<br>ʵ��<br>$(“button”).click(function(){<br>  alert($(“#runoob”).attr(“href”));<br>});</p>
+<p>�������� - text()��html() �Լ� val()<br>���ǽ�ʹ��ǰһ���е�������ͬ�ķ������������ݣ�<br>text() - ���û򷵻���ѡԪ�ص��ı�����<br>html() - ���û򷵻���ѡԪ�ص����ݣ����� HTML ���ǣ�<br>val() - ���û򷵻ر����ֶε�ֵ<br>������������ʾ����ͨ�� text()��html() �Լ� val() �������������ݣ�<br>ʵ��<br>$(“#btn1”).click(function(){<br>    $(“#test1”).text(“Hello world!”);<br>});<br>$(“#btn2”).click(function(){<br>    $(“#test2”).html(“<b>Hello world!</b>“);<br>});<br>$(“#btn3”).click(function(){<br>    $(“#test3”).val(“RUNOOB”);<br>});</p>
+<p>text()��html() �Լ� val() �Ļص�����<br>���������� jQuery ������text()��html() �Լ� val()��ͬ��ӵ�лص��������ص�������������������ѡԪ���б��е�ǰԪ�ص��±꣬�Լ�ԭʼ���ɵģ�ֵ��Ȼ���Ժ�����ֵ������ϣ��ʹ�õ��ַ�����</p>
+<p>��������:<br>��attr��ȡ��������ֵ<br>$(document).click(function (e) {<br>var v_id = $(e.target).attr(‘id’);<br>} </p>
+<p>JS/JQuery��ȡ��ҳ�����»�ĳDIV����ͼƬ<br><a href="http://www.webkaka.com/tutorial/js/2016/111216/" target="_blank" rel="external">http://www.webkaka.com/tutorial/js/2016/111216/</a></p>
+<p>JSʵ��ͼƬ����������ģ̬��Ч��<br><a href="http://www.jb51.net/article/112764.htm" target="_blank" rel="external">http://www.jb51.net/article/112764.htm</a></p>
+<p>�����µ� HTML ����<br>���ǽ�ѧϰ�������������ݵ��ĸ� jQuery ������<br>append() - �ڱ�ѡԪ�صĽ�β��������<br>prepend() - �ڱ�ѡԪ�صĿ�ͷ��������<br>after() - �ڱ�ѡԪ��֮����������<br>before() - �ڱ�ѡԪ��֮ǰ��������</p>
+<p>ɾ��Ԫ��/����<br>����ɾ��Ԫ�غ����ݣ�һ����ʹ���������� jQuery ������<br>remove() - ɾ����ѡԪ�أ�������Ԫ�أ�<br>empty() - �ӱ�ѡԪ����ɾ����Ԫ��</p>
+<p>jQuery ���� CSS<br>jQuery ӵ�����ɽ��� CSS �����ķ��������ǽ�ѧϰ������Щ��<br>addClass() - ����ѡԪ������һ����������<br>removeClass() - �ӱ�ѡԪ��ɾ��һ����������<br>toggleClass() - �Ա�ѡԪ�ؽ�������/ɾ�������л�����<br>css() - ���û򷵻���ʽ����</p>
+<p>���� CSS ����<br>���践��ָ���� CSS ���Ե�ֵ����ʹ�������﷨��<br>css(“propertyname”);<br>���������ӽ������׸�ƥ��Ԫ�ص� background-color ֵ��<br>ʵ��<br>$(“p”).css(“background-color”);</p>
+<p>���� CSS ����<br>���践��ָ���� CSS ���Ե�ֵ����ʹ�������﷨��<br>css(“propertyname”);<br>���������ӽ������׸�ƥ��Ԫ�ص� background-color ֵ��<br>ʵ��<br>$(“p”).css(“background-color”);</p>
+<p>jQuery �ߴ緽��<br>jQuery �ṩ���������ߴ�����Ҫ������<br>width()<br>height()<br>innerWidth()<br>innerHeight()<br>outerWidth()<br>outerHeight()</p>
+<h2 id="jQuery-����"><a href="#jQuery-����" class="headerlink" title="jQuery ����"></a>jQuery ����</h2><p>ʲô�Ǳ�����<br>jQuery ��������Ϊ”�ƶ�”�����ڸ���������������Ԫ�صĹ�ϵ��”����”����ѡȡ��HTML Ԫ�ء���ĳ��ѡ����ʼ������������ѡ���ƶ���ֱ���ִ���������Ԫ��Ϊֹ��<br>��ͼչʾ��һ����������ͨ�� jQuery ���������ܹ��ӱ�ѡ����ǰ�ģ�Ԫ�ؿ�ʼ�����ɵ��ڼ������������ƶ������ȣ��������ƶ��������ˮƽ�ƶ���ͬ�����������ƶ�����Ϊ�� DOM ���б�����</p>
+<p>jQuery ���� - ����<br>�����Ǹ����游�����游�ȵȡ�<br>ͨ�� jQuery�����ܹ����ϱ��� DOM �����Բ���Ԫ�ص����ȡ�<br>���ϱ��� DOM ��<br>��Щ jQuery ���������ã������������ϱ��� DOM ����<br>parent()<br>parents()<br>parentsUntil()</p>
+<p>jQuery ���� - ����<br>�����Ǹ����游�����游�ȵȡ�<br>ͨ�� jQuery�����ܹ����ϱ��� DOM �����Բ���Ԫ�ص����ȡ�<br>���ϱ��� DOM ��<br>��Щ jQuery ���������ã������������ϱ��� DOM ����<br>parent()<br>parents()<br>parentsUntil()</p>
+<p>jQuery parent() ����<br>parent() �������ر�ѡԪ�ص�ֱ�Ӹ�Ԫ�ء�<br>�÷���ֻ������һ���� DOM �����б�����<br>���������ӷ���ÿ�� <span> Ԫ�صĵ�ֱ�Ӹ�Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“span”).parent();<br>});</span></p>
+<p>jQuery parents() ����<br>parents() �������ر�ѡԪ�ص���������Ԫ�أ���һ·����ֱ���ĵ��ĸ�Ԫ�� (<html>)��<br>���������ӷ������� <span> Ԫ�ص��������ȣ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“span”).parents();<br>});</span></html></p>
+<p>��Ҳ����ʹ�ÿ�ѡ���������˶�����Ԫ�ص�������<br>���������ӷ������� <span> Ԫ�ص��������ȣ��������� <ul> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“span”).parents(“ul”);<br>});</ul></span></p>
+<p>jQuery parentsUntil() ����<br>parentsUntil() �������ؽ�����������Ԫ��֮������������Ԫ�ء�<br>���������ӷ��ؽ��� <span> �� <div> Ԫ��֮������������Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“span”).parentsUntil(“div”);<br>});</div></span></p>
+<p>jQuery ���� - ����<br>�������ӡ�������ȵȡ�<br>ͨ�� jQuery�����ܹ����±��� DOM �����Բ���Ԫ�صĺ�����<br>���±��� DOM ��<br>�����������������±��� DOM ���� jQuery ������<br>children()<br>find()</p>
+<p>jQuery children() ����<br>children() �������ر�ѡԪ�ص�����ֱ����Ԫ�ء�<br>�÷���ֻ������һ���� DOM �����б�����<br>���������ӷ���ÿ�� <div> Ԫ�ص�����ֱ����Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div”).children();<br>});</div></p>
+<p>jQuery children() ����<br>children() �������ر�ѡԪ�ص�����ֱ����Ԫ�ء�<br>�÷���ֻ������һ���� DOM �����б�����<br>���������ӷ���ÿ�� <div> Ԫ�ص�����ֱ����Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div”).children();<br>});</div></p>
+<p>��Ҳ����ʹ�ÿ�ѡ���������˶���Ԫ�ص�������<br>���������ӷ�������Ϊ “1” ������ </p><p> Ԫ�أ����������� <div> ��ֱ����Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div”).children(“p.1”);<br>});</div></p>
+<p>jQuery find() ����<br>find() �������ر�ѡԪ�صĺ���Ԫ�أ�һ·����ֱ������һ��������<br>���������ӷ������� <div> ���������� <span> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div”).find(“span”);<br>});</span></div></p>
+<p>���������ӷ��� <div> �����к�����<br>ʵ��<br>$(document).ready(function(){<br>  $(“div”).find(“*”);<br>});</div></p>
+<p>jQuery ���� - ͬ��(siblings)<br>ͬ��ӵ����ͬ�ĸ�Ԫ�ء�<br>ͨ�� jQuery�����ܹ��� DOM ���б���Ԫ�ص�ͬ��Ԫ�ء�<br>�� DOM ����ˮƽ����<br>���������õķ����������� DOM ������ˮƽ������<br>siblings()<br>next()<br>nextAll()<br>nextUntil()<br>prev()<br>prevAll()<br>prevUntil()<br>jQuery siblings() ����<br>siblings() �������ر�ѡԪ�ص�����ͬ��Ԫ�ء�<br>���������ӷ��� </p><h2> ������ͬ��Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“h2”).siblings();<br>});<p></p>
+<p>��Ҳ����ʹ�ÿ�ѡ���������˶�ͬ��Ԫ�ص�������<br>���������ӷ������� </p><h2> ��ͬ��Ԫ�ص����� <p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“h2”).siblings(“p”);<br>});</p>
+<p>jQuery next() ����<br>next() �������ر�ѡԪ�ص���һ��ͬ��Ԫ�ء�<br>�÷���ֻ����һ��Ԫ�ء�<br>���������ӷ��� </p><h2> ����һ��ͬ��Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“h2”).next();<br>});<p></p>
+<p>jQuery nextAll() ����<br>nextAll() �������ر�ѡԪ�ص����и�����ͬ��Ԫ�ء�<br>���������ӷ��� </p><h2> �����и�����ͬ��Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“h2”).nextAll();<br>});<p></p>
+<p>jQuery nextUntil() ����<br>nextUntil() �������ؽ���������������֮�������и�����ͬ��Ԫ�ء�<br>���������ӷ��ؽ��� </p><h2> �� <h6> Ԫ��֮��������ͬ��Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“h2”).nextUntil(“h6”);<br>});<p></p>
+<p>jQuery prev(), prevAll() &amp; prevUntil() ����<br>prev(), prevAll() �Լ� prevUntil() �����Ĺ�����ʽ�������ķ������ƣ�ֻ���������෴���ѣ����Ƿ��ص���ǰ����ͬ��Ԫ�أ��� DOM ��������ͬ��Ԫ��������������������ǰ����</p>
+<p>jQuery ����- ����<br>��С����Ԫ�صķ�Χ<br>�����������Ĺ��˷����ǣ�first(), last() �� eq()��������������������һ��Ԫ���е�λ����ѡ��һ���ض���Ԫ�ء�<br>�������˷��������� filter() �� not() ������ѡȡƥ������ƥ��ĳ��ָ����׼��Ԫ�ء�<br>jQuery first() ����<br>first() �������ر�ѡԪ�ص��׸�Ԫ�ء�<br>����������ѡȡ�׸� <div> Ԫ���ڲ��ĵ�һ�� <p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div p”).first();<br>});</p>
+<p>jQuery last() ����<br>last() �������ر�ѡԪ�ص�����һ��Ԫ�ء�<br>����������ѡ������һ�� <div> Ԫ���е�����һ�� <p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“div p”).last();<br>});</p>
+<p>jQuery eq() ����<br>eq() �������ر�ѡԪ���д���ָ�������ŵ�Ԫ�ء�<br>�����Ŵ� 0 ��ʼ�������׸�Ԫ�ص��������� 0 ������ 1������������ѡȡ�ڶ��� </p><p> Ԫ�أ������� 1����<br>ʵ��<br>$(document).ready(function(){<br>  $(“p”).eq(1);<br>});</p>
+<p>jQuery filter() ����<br>filter() �����������涨һ����׼����ƥ��������׼��Ԫ�ػᱻ�Ӽ�����ɾ����ƥ����Ԫ�ػᱻ���ء�<br>���������ӷ��ش������� “url” ������ </p><p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“p”).filter(“.url”);<br>});</p>
+<p>jQuery filter() ����<br>filter() �����������涨һ����׼����ƥ��������׼��Ԫ�ػᱻ�Ӽ�����ɾ����ƥ����Ԫ�ػᱻ���ء�<br>���������ӷ��ش������� “url” ������ </p><p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“p”).filter(“.url”);<br>});</p>
+<p>jQuery not() ����<br>not() �������ز�ƥ����׼������Ԫ�ء�<br>��ʾ��not() ������ filter() �෴��<br>���������ӷ��ز��������� “url” ������ </p><p> Ԫ�أ�<br>ʵ��<br>$(document).ready(function(){<br>  $(“p”).not(“.url”);<br>});</p>
+<h2 id="jquery-ajax"><a href="#jquery-ajax" class="headerlink" title="jquery ajax"></a>jquery ajax</h2><p>AJAX �����������������ݵ����������ڲ�����ȫ��ҳ���������£�ʵ���˶Բ�����ҳ�ĸ��¡�<br>jQuery AJAX ʵ��<br>�����������İ�ť��ͨ�� jQuery AJAX �ı������ı���</p>
+<p>���� jQuery �� AJAX<br>jQuery �ṩ������ AJAX �йصķ�����<br>ͨ�� jQuery AJAX ���������ܹ�ʹ�� HTTP Get �� HTTP Post ��Զ�̷������������ı���HTML��XML �� JSON - ͬʱ���ܹ�����Щ�ⲿ����ֱ��������ҳ�ı�ѡԪ���С�<br>��ʾ������û�� jQuery��AJAX ���̻�����Щ�Ѷȵġ�<br>��д������ AJAX ���벢�����ף���Ϊ��ͬ���������� AJAX ��ʵ�ֲ�����ͬ������ζ����������д�����Ĵ��������������в��ԡ�������jQuery �Ŷ�Ϊ���ǽ������������⣬����ֻ��Ҫһ�м򵥵Ĵ��룬�Ϳ���ʵ�� AJAX ���ܡ�</p>
+<p>jQuery load() ����<br>jQuery load() �����Ǽ򵥵�ǿ���� AJAX ������<br>load() �����ӷ������������ݣ����ѷ��ص����ݷ��뱻ѡԪ���С�<br>�﷨��<br>$(selector).load(URL,data,callback);<br>������ URL �����涨��ϣ�����ص� URL��<br>��ѡ�� data �����涨������һͬ���͵Ĳ�ѯ�ַ�����/ֵ�Լ��ϡ�<br>��ѡ�� callback ������ load() �������ɺ���ִ�еĺ������ơ�<br>����ʾ���ļ���”demo_test.txt”�������ݣ�</p>
+<p></p><h2>jQuery and AJAX is FUN!!!</h2></div></p>
+<p id="p1">This is some text in a paragraph.</p>
+
+
+<p>jQuery get() �� post() ��������ͨ�� HTTP GET �� POST �����ӷ������������ݡ�<br>HTTP ������GET vs. POST<br>�����ڿͻ��˺ͷ������˽�������-��Ӧ�ĳ��÷����ǣ�GET �� POST��<br>GET - ��ָ������Դ��������<br>POST - ��ָ������Դ�ύҪ����������<br>GET ���������ڴӷ��������ã�ȡ�أ����ݡ�ע�ͣ�GET �������ܷ��ػ������ݡ�<br>POST Ҳ�����ڴӷ�������ȡ���ݡ�������POST �������Ỻ�����ݣ����ҳ�������ͬ����һ���������ݡ�<br>����ѧϰ�����й� GET �� POST �Լ�������������֪ʶ�����Ķ����ǵ� HTTP ���� - GET �Ա� POST��</p>
+<p>jQuery $.get() ����<br>$.get() ����ͨ�� HTTP GET �����ӷ��������������ݡ�</p>
+<p>�﷨��<br>$.get(URL,callback);<br>������ URL �����涨��ϣ�������� URL��<br>��ѡ�� callback �����������ɹ�����ִ�еĺ�������<br>����������ʹ�� $.get() �����ӷ������ϵ�һ���ļ���ȡ�����ݣ�<br>ʵ��<br>$(“button”).click(function(){<br>  $.get(“demo_test.asp”,function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});</p>
+<p>$.get() �ĵ�һ������������ϣ�������� URL��”demo_test.asp”����<br>�ڶ��������ǻص���������һ���ص��������б�����ҳ�������ݣ��ڶ����ص���������������״̬��<br>��ʾ������ ASP �ļ� (“demo_test.asp”) ����������<br>&lt;%<br>response.write(“This is some text from an external ASP file.”)<br>%&gt;</p>
+<p>jQuery $.post() ����<br>$.post() ����ͨ�� HTTP POST �����ӷ��������������ݡ�<br>�﷨��<br>$.post(URL,data,callback);<br>������ URL �����涨��ϣ�������� URL��<br>��ѡ�� data �����涨��ͬ�������͵����ݡ�<br>��ѡ�� callback �����������ɹ�����ִ�еĺ�������<br>����������ʹ�� $.post() ��ͬ����һ���������ݣ�<br>ʵ��<br>$(“button”).click(function(){<br>  $.post(“demo_test_post.asp”,<br>  {<br>    name:”Donald Duck”,<br>    city:”Duckburg”<br>  },<br>  function(data,status){<br>    alert(“Data: “ + data + “\nStatus: “ + status);<br>  });<br>});</p>
+<p>$.post() �ĵ�һ������������ϣ�������� URL (“demo_test_post.asp”)��<br>Ȼ��������ͬ������name �� city��һ���������ݡ�<br>“demo_test_post.asp” �е� ASP �ű���ȡ��Щ�����������ǽ��д�����Ȼ�󷵻ؽ�����<br>�����������ǻص���������һ���ص��������б�����ҳ�������ݣ����ڶ�����������������״̬��<br>��ʾ������ ASP �ļ� (“demo_test_post.asp”) ����������<br>&lt;%<br>dim fname,city<br>fname=Request.Form(“name”)<br>city=Request.Form(“city”)<br>Response.Write(“Dear “ &amp; fname &amp; “. “)<br>Response.Write(“Hope you live well in “ &amp; city &amp; “.”)<br>%&gt;</p>
+<p>jQuery noConflict() ����<br>noConflict() �������ͷŻ� $ ��ʶ���Ŀ��ƣ����������ű��Ϳ���ʹ�����ˡ�<br>ʵ��<br>��Ȼ������Ȼ����ͨ��ȫ��������д�ķ�ʽ��ʹ�� jQuery��<br>$.noConflict();<br>jQuery(document).ready(function(){<br>  jQuery(“button”).click(function(){<br>    jQuery(“p”).text(“jQuery �������У�”);<br>  });<br>});</p>
+<p>��Ҳ���Դ����Լ��ļ�д��noConflict() �ɷ��ض� jQuery �����ã������԰��������������Թ��Ժ�ʹ�á��뿴�������ӣ�<br>var jq = $.noConflict();<br>jq(document).ready(function(){<br>  jq(“button”).click(function(){<br>    jq(“p”).text(“jQuery �������У�”);<br>  });<br>});</p>
+<p>ʵ��<br>�������� jQuery ������ʹ�� $ ��д����������Ը���ı��������ݷ�ʽ����ô�����԰� $ ������Ϊ�������ݸ� ready �����������Ϳ����ں�����ʹ�� $ ������ - ���ں����⣬���ɲ��ò�ʹ�� “jQuery”��<br>$.noConflict();<br>jQuery(document).ready(function($){<br>  $(“button”).click(function(){<br>    $(“p”).text(“jQuery �������У�”);<br>  });<br>});</p>
+</div></p></h6></h2></h2></h2></h2></h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/05/11/jqueryhtml/" data-id="cj2osqar5000dhsfbb4gjtw02" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jquery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/10/jquery/" class="article-date">
+  <time datetime="2017-05-10T14:59:54.426Z" itemprop="datePublished">2017-05-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jquery�̳�"><a href="#jquery�̳�" class="headerlink" title="jquery�̳�"></a>jquery�̳�</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.5.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">		$(document).ready(function()&#123;</div><div class="line">			$(&quot;p&quot;).click(function()&#123;</div><div class="line">				$(this).hide();</div><div class="line">			&#125;);</div><div class="line">		&#125;);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;p&gt;If you click on me,I will disappear.&lt;/p&gt;</div><div class="line">	&lt;p&gt;If you click on me,I will disappear.&lt;/p&gt;</div><div class="line"></div><div class="line"></div><div class="line">	</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>jQuery �汾 2 ���ϲ�֧�� IE6��7��8 ��������<br>������Ҫ֧�� IE6/7/8����ô��ѡ��1.9<br>�㻹����ͨ������ע����ʹ�� IE6/7/8 ʱֻ������1.9��<br><!--[if lt IE 9]>
+    <script src="jquery-1.9.0.js"></script>
+<![endif]--><br><!--[if gte IE 9]><!--><br>    <script src="jquery-2.0.0.js"></script><br><!--<![endif]--></p>
+<p>���Ƿ����ɻ�Ϊʲô����û���� <script> ��ǩ��ʹ�� type=”text/javascript” ��</p>
+<p>�� HTML5 �У������������ˡ�JavaScript �� HTML5 �Լ������ִ��������е�Ĭ�Ͻű����ԣ�</p>
+<p><a href="http://www.runoob.com/jquery/jquery-install.html">��������ϣ�����ز����� jQuery����ôҲ����ͨ�� CDN�����ݷַ�����)��������</a></p>
+<p>jQuery �﷨<br>jQuery �﷨��ͨ��ѡȡ HTML Ԫ�أ�����ѡȡ��Ԫ��ִ��ĳЩ������<br>�����﷨�� $(selector).action()<br>��Ԫ���Ŷ��� jQuery<br>ѡ������selector��”��ѯ”��”����” HTML Ԫ��<br>jQuery �� action() ִ�ж�Ԫ�صĲ���</p>
+<p>�ĵ������¼�<br>��Ҳ���Ѿ�ע�⵽�����ǵ�ʵ���е����� jQuery ����λ��һ�� document ready �����У�<br>$(document).ready(function(){</p>
+<p>   // ��ʼд jQuery ����…</p>
+<p>});<br>����Ϊ�˷�ֹ�ĵ�����ȫ���أ�������֮ǰ���� jQuery ���롣<br>�������ĵ�û����ȫ����֮ǰ�����к�������������ʧ�ܡ��������������������ӣ�<br>��ͼ����һ�������ڵ�Ԫ��<br>����δ��ȫ���ص�ͼ���Ĵ�С</p>
+<p>�����¼�    �����¼�    �����¼�    �ĵ�/�����¼�<br>click        keypress    submit        load<br>dblclick    keydown        change        resize<br>mouseenter    keyup        focus        scroll<br>mouseleave                blur        unload</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt; </div><div class="line">&lt;title&gt;�����̳�(runoob.com)&lt;/title&gt; </div><div class="line">&lt;script src=&quot;http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js&quot;&gt;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">$(document).ready(function()&#123;</div><div class="line">  $(&quot;#p1&quot;).mouseenter(function()&#123;</div><div class="line">    alert(&apos;���������Ƶ��� id=&quot;p1&quot; ��Ԫ����!&apos;);</div><div class="line">	  $(this).css(&quot;background-color&quot;,&quot;yellow&quot;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;p1&quot;&gt;����ָ�������˴����ῴ��������&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h2 id="jquery-Ч��"><a href="#jquery-Ч��" class="headerlink" title="jquery Ч��"></a>jquery Ч��</h2><p>fadeout()�¼�<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;/jquery/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">$(document).ready(function()&#123;</div><div class="line">  $(&quot;button&quot;).click(function()&#123;</div><div class="line">    $(&quot;#div1&quot;).fadeOut();</div><div class="line">    $(&quot;#div2&quot;).fadeOut(&quot;slow&quot;);</div><div class="line">    $(&quot;#div3&quot;).fadeOut(3000);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">&lt;p&gt;��ʾ���в�ͬ������ fadeOut() ������&lt;/p&gt;</div><div class="line">&lt;button&gt;�������ʹ�������ε���&lt;/button&gt;</div><div class="line">&lt;br&gt;&lt;br&gt;</div><div class="line">&lt;div id=&quot;div1&quot; style=&quot;width:80px;height:80px;background-color:red;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;br&gt;</div><div class="line">&lt;div id=&quot;div2&quot; style=&quot;width:80px;height:80px;background-color:green;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;br&gt;</div><div class="line">&lt;div id=&quot;div3&quot; style=&quot;width:80px;height:80px;background-color:blue;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>animate�¼�<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;/jquery/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt; </div><div class="line">$(document).ready(function()&#123;</div><div class="line">  $(&quot;button&quot;).click(function()&#123;</div><div class="line">    var div=$(&quot;div&quot;);</div><div class="line">    div.animate(&#123;height:&apos;300px&apos;,opacity:&apos;0.4&apos;&#125;,&quot;slow&quot;);</div><div class="line">    div.animate(&#123;width:&apos;300px&apos;,opacity:&apos;0.8&apos;&#125;,&quot;slow&quot;);</div><div class="line">    div.animate(&#123;height:&apos;100px&apos;,opacity:&apos;0.4&apos;&#125;,&quot;slow&quot;);</div><div class="line">    div.animate(&#123;width:&apos;100px&apos;,opacity:&apos;0.8&apos;&#125;,&quot;slow&quot;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt; </div><div class="line">&lt;/head&gt;</div><div class="line"> </div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;button&gt;��ʼ����&lt;/button&gt;</div><div class="line">&lt;p&gt;Ĭ�������£����� HTML Ԫ�ص�λ�ö��Ǿ�̬�ģ������޷��ƶ���������λ�ý��в������ǵ����Ȱ�Ԫ�ص� CSS position ��������Ϊ relative��fixed �� absolute��&lt;/p&gt;</div><div class="line">&lt;div style=&quot;background:#98bf21;height:100px;width:100px;position:absolute;&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>hide()���ز����ı�<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;/jquery/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">$(document).ready(function()&#123;</div><div class="line">  $(&quot;.ex .hide&quot;).click(function()&#123;</div><div class="line">    $(this).parents(&quot;.ex&quot;).hide(&quot;slow&quot;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt; </div><div class="line">div.ex</div><div class="line">&#123;</div><div class="line">background-color:#e5eecc;</div><div class="line">padding:7px;</div><div class="line">border:solid 1px #c3c3c3;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"> </div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;h3&gt;�й����´�&lt;/h3&gt;</div><div class="line">&lt;div class=&quot;ex&quot;&gt;</div><div class="line">&lt;button class=&quot;hide&quot; type=&quot;button&quot;&gt;����&lt;/button&gt;</div><div class="line">&lt;p&gt;��ϵ�ˣ�������&lt;br /&gt; </div><div class="line">��������· 100 ��&lt;br /&gt;</div><div class="line">����&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;h3&gt;�������´�&lt;/h3&gt;</div><div class="line">&lt;div class=&quot;ex&quot;&gt;</div><div class="line">&lt;button class=&quot;hide&quot; type=&quot;button&quot;&gt;����&lt;/button&gt;</div><div class="line">&lt;p&gt;��ϵ�ˣ�David&lt;br /&gt; </div><div class="line">�������� 200 ��&lt;br /&gt;</div><div class="line">ŦԼ&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>Slide panel<br>��ʾ�򵥵� Slide Panel Ч����</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;/jquery/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt; </div><div class="line">$(document).ready(function()&#123;</div><div class="line">$(&quot;.flip&quot;).click(function()&#123;</div><div class="line">    $(&quot;.panel&quot;).slideToggle(&quot;slow&quot;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line"> </div><div class="line">&lt;style type=&quot;text/css&quot;&gt; </div><div class="line">div.panel,p.flip</div><div class="line">&#123;</div><div class="line">margin:0px;</div><div class="line">padding:5px;</div><div class="line">text-align:center;</div><div class="line">background:#e5eecc;</div><div class="line">border:solid 1px #c3c3c3;</div><div class="line">&#125;</div><div class="line">div.panel</div><div class="line">&#123;</div><div class="line">height:120px;</div><div class="line">display:none;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"> </div><div class="line">&lt;body&gt;</div><div class="line"> </div><div class="line">&lt;div class=&quot;panel&quot;&gt;</div><div class="line">&lt;p&gt;W3School - ���ȵ� Web �����̳�վ��&lt;/p&gt;</div><div class="line">&lt;p&gt;�� W3School���������ҵ�������Ҫ��������վ�����̡̳�&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"> </div><div class="line">&lt;p class=&quot;flip&quot;&gt;����������&lt;/p&gt;</div><div class="line"> </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>click()</p>
+<p>dblclick()</p>
+<p>mouseenter()</p>
+<p>mouseleave()</p>
+<p>mousedown()</p>
+<p>mouseup()</p>
+<p>hover()</p>
+<p>focus()<br>��Ԫ�ػ��ý���ʱ������ focus �¼���</p>
+<p>blur()<br>��Ԫ��ʧȥ����ʱ������ blur �¼���</p>
+<p>hide() �� show()</p>
+<p>ͨ�� jQuery��������ʹ�� toggle() �������л� hide() �� show() ������<br>��ʾ�����ص�Ԫ�أ�����������ʾ��Ԫ�أ�</p>
+<p>jQuery fadeIn()<br>��ʾ jQuery fadeIn() ������<br>jQuery fadeOut()<br>��ʾ jQuery fadeOut() ������<br>jQuery fadeToggle()<br>��ʾ jQuery fadeToggle() ������<br>jQuery fadeTo()<br>��ʾ jQuery fadeTo() ������</p>
+<p>jQuery slideDown()<br>��ʾ jQuery slideDown() ������<br>jQuery slideUp()<br>��ʾ jQuery slideUp() ������<br>jQuery slideToggle()<br>��ʾ jQuery slideToggle() ������</p>
+<p>jQuery animate() - ������������<br>��ע�⣬���ɶ����Ĺ����п�ͬʱʹ�ö������ԣ�</p>
+<p>jQuery animate() - ʹ������ֵ<br>Ҳ���Զ�������ֵ����ֵ������Ԫ�صĵ�ǰֵ������Ҫ��ֵ��ǰ������ += �� -=��</p>
+<p>jQuery animate() - ʹ��Ԥ������ֵ<br>���������԰����ԵĶ���ֵ����Ϊ “show”��”hide” �� “toggle”��</p>
+<p>jQuery animate() - ʹ�ö��й���<br>Ĭ�ϵأ�jQuery �ṩ���Զ����Ķ��й��ܡ�<br>����ζ���������ڱ˴�֮����д���� animate() ���ã�jQuery �ᴴ��������Щ�������õ�”�ڲ�”���С�Ȼ����һ������Щ animate ���á�</p>
+<p>jQuery slideDown() ����<br>jQuery slideDown() �����������»���Ԫ�ء�</p>
+<p>jQuery slideUp() ����<br>jQuery slideUp() �����������ϻ���Ԫ�ء�</p>
+<p>jQuery slideToggle() ����<br>jQuery slideToggle() ���������� slideDown() �� slideUp() ����֮�������л���<br>����Ԫ�����»������� slideToggle() �����ϻ������ǡ�<br>����Ԫ�����ϻ������� slideToggle() �����»������ǡ�</p>
+<p>jQuery animate() - ������������<br>��ע�⣬���ɶ����Ĺ����п�ͬʱʹ�ö������ԣ�<br>ʵ��<br>$(“button”).click(function(){<br>  $(“div”).animate({<br>    left:’250px’,<br>    opacity:’0.5’,<br>    height:’150px’,<br>    width:’150px’<br>  });<br>});</p>
+<p>������ animate() �������������� CSS ��������</p>
+<p>�ǵģ��������ԣ���������Ҫ��סһ����Ҫ�����飺��ʹ�� animate() ʱ������ʹ�� Camel ���Ƿ���д���е������������磬����ʹ�� paddingLeft ������ padding-left��ʹ�� marginRight ������ margin-right���ȵȡ�<br>ͬʱ��ɫ�ʶ������������ں��� jQuery ���С�<br>������Ҫ������ɫ����������Ҫ�� jquery.com ���� ��ɫ���� ������</p>
+<p>jQuery animate() - ʹ������ֵ<br>Ҳ���Զ�������ֵ����ֵ������Ԫ�صĵ�ǰֵ������Ҫ��ֵ��ǰ������ += �� -=��</p>
+<p>jQuery animate() - ʹ��Ԥ������ֵ<br>���������԰����ԵĶ���ֵ����Ϊ “show”��”hide” �� “toggle”��</p>
+<p>jQuery animate() - ʹ�ö��й���<br>Ĭ�ϵأ�jQuery �ṩ���Զ����Ķ��й��ܡ�<br>����ζ���������ڱ˴�֮����д���� animate() ���ã�jQuery �ᴴ��������Щ�������õ�”�ڲ�”���С�Ȼ����һ������Щ animate ���á�<br>ʵ�� 1<br>$(“button”).click(function(){<br>  var div=$(“div”);<br>  div.animate({height:’300px’,opacity:’0.4’},”slow”);<br>  div.animate({width:’300px’,opacity:’0.8’},”slow”);<br>  div.animate({height:’100px’,opacity:’0.4’},”slow”);<br>  div.animate({width:’100px’,opacity:’0.8’},”slow”);<br>});<br>���������Ӱ� <div> Ԫ�����ұ��ƶ��� 100 ���أ�Ȼ�������ı����ֺţ�<br>ʵ�� 2<br>$(“button”).click(function(){<br>  var div=$(“div”);<br>  div.animate({left:’100px’},”slow”);<br>  div.animate({fontSize:’3em’},”slow”);<br>});</p>
+</script></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/05/10/jquery/" data-id="cj2osqard000ghsfb8hoea27j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-myPhpWork" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/30/myPhpWork/" class="article-date">
@@ -105,11 +343,15 @@
 <p>$obj -&gt;limit([偏移量，]条数)  限制查询的条数</p>
 <p>输出表中所有数据<br>&lt;?php    var_dump($umdata);  ?&gt;</p>
 <p>输出单个数据表的时候注意全部小写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;volist name=&quot;umdata&quot; id=&quot;umvo&quot;&gt;</div><div class="line">        &#123;$umvo.userid&#125;--&#123;$umvo.username&#125;--&#123;$umvo.userpass&#125;--&#123;$umvo.usertelephone&#125;--&#123;$umvo.uservip&#125;--&#123;$umvo.userphotos&#125;</div><div class="line">        &lt;br/&gt;</div><div class="line">    &lt;/volist&gt;</div></pre></td></tr></table></figure></p>
+<p>20170508问题</p>
+<p>解决mysql乱码问题<br><a href="http://jingyan.baidu.com/article/e73e26c0cf531724adb6a7e2.html" target="_blank" rel="external">详解mysql中文乱码的问题：[4]phpmyadmin乱码</a></p>
+<p>html5添加表格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;table&gt;</div><div class="line">&lt;tr&gt;</div><div class="line">&lt;td&gt;Cell A&lt;/td&gt;</div><div class="line">&lt;td&gt;Cell B&lt;/td&gt;</div><div class="line">&lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div></pre></td></tr></table></figure></p>
+<p><a href="https://www.oschina.net/question/5189_28155" target="_blank" rel="external">html5+css3登录页面</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/30/myPhpWork/" data-id="cj2bgshiw00032cfbyzxx54oy" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/30/myPhpWork/" data-id="cj2osqaru000ohsfbac3cdv22" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj2bgshh900002cfb8pv5yqsd" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj2osqapp0001hsfblujufrup" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj2bgshjl00072cfbrvmqowt4" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/25/thinkphp/" data-id="cj2osqaqv0009hsfbi7am8om7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj2bgsho1000e2cfb28ki22xa" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/17/bootstrap/" data-id="cj2osqaqd0004hsfb41kre247" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +531,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj2bgshj700052cfbfnljcn5e" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/geshi/" data-id="cj2osqapz0002hsfbv17atkq4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -334,7 +576,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj2bgshq7000k2cfbf4z303xc" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/15/yueqian/" data-id="cj2osqarz000phsfbq5t4pza8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -379,140 +621,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj2bgshpy000i2cfbaaj4j6lj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象程序设计" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/12/面向对象程序设计/" class="article-date">
-  <time datetime="2017-04-12T13:35:15.000Z" itemprop="datePublished">2017-04-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/日志/">日志</a>►<a class="article-category-link" href="/categories/日志/二级目录/">二级目录</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/面向对象程序设计/">面向对象程序设计</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>摘要: 面向对象程序设计<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/04/12/面向对象程序设计/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/面向对象程序设计/" data-id="cj2bgshpt000h2cfby7f61udb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/12/test2/" class="article-date">
-  <time datetime="2017-04-12T07:44:42.000Z" itemprop="datePublished">2017-04-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/test2/">test2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>摘要：a test too<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/04/12/test2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/test2/" data-id="cj2bgshj200042cfb4iwqkord" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-yueqian0414" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/12/yueqian0414/" class="article-date">
-  <time datetime="2017-04-12T02:38:22.000Z" itemprop="datePublished">2017-04-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/粤嵌培训/">粤嵌培训</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/12/yueqian0414/">yueqian0414</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>摘要:<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/04/12/yueqian0414/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/12/yueqian0414/" data-id="cj2bgshqh000l2cfbgpofhj22" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/14/vuejs/" data-id="cj2osqaqn0006hsfbqva9cxe2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -564,7 +673,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
     </div>
   </div>
 
@@ -577,23 +686,23 @@
       <ul>
         
           <li>
+            <a href="/2017/05/14/css/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/11/jqueryhtml/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/10/jquery/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/30/myPhpWork/">(no title)</a>
           </li>
         
           <li>
             <a href="/2017/04/26/ThinkPhp3.1快速入门/">ThinkPhp3.1快速入门</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/25/thinkphp/">ThinkPhp</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/17/bootstrap/">Bootstrap</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/15/geshi/">geshi</a>
           </li>
         
       </ul>

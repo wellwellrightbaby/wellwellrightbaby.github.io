@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shevon&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字体尺寸：假定当前默认字体尺寸是14px，n em即为14px字体尺寸的n倍 高度单位ex:定义一条与字母x高度相同的线 宽度单位ch:数字“0”的宽度 相对长度单位rem。相对于根元素(即html元素)font-size计算值的倍数 vw:相对于视口的宽度。视口被均分为100单位的vw。如果视口的宽度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。 vh:相对于">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shevon's Blog">
+<meta property="og:url" content="https://wellwellrightbaby.github.io/2017/05/14/css/index.html">
+<meta property="og:site_name" content="Shevon's Blog">
+<meta property="og:description" content="字体尺寸：假定当前默认字体尺寸是14px，n em即为14px字体尺寸的n倍 高度单位ex:定义一条与字母x高度相同的线 宽度单位ch:数字“0”的宽度 相对长度单位rem。相对于根元素(即html元素)font-size计算值的倍数 vw:相对于视口的宽度。视口被均分为100单位的vw。如果视口的宽度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。 vh:相对于">
+<meta property="og:updated_time" content="2017-05-14T14:26:59.501Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shevon's Blog">
+<meta name="twitter:description" content="字体尺寸：假定当前默认字体尺寸是14px，n em即为14px字体尺寸的n倍 高度单位ex:定义一条与字母x高度相同的线 宽度单位ch:数字“0”的宽度 相对长度单位rem。相对于根元素(即html元素)font-size计算值的倍数 vw:相对于视口的宽度。视口被均分为100单位的vw。如果视口的宽度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。 vh:相对于">
+  
+    <link rel="alternate" href="/atom.xml" title="Shevon&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Shevon&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Fighting in my all life</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wellwellrightbaby.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/14/css/" class="article-date">
+  <time datetime="2017-05-14T10:53:30.776Z" itemprop="datePublished">2017-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>字体尺寸：假定当前默认字体尺寸是14px，n em即为14px字体尺寸的n倍</p>
+<p>高度单位ex:定义一条与字母x高度相同的线</p>
+<p>宽度单位ch:数字“0”的宽度</p>
+<p>相对长度单位rem。相对于根元素(即html元素)font-size计算值的倍数</p>
+<p>vw:相对于视口的宽度。视口被均分为100单位的vw。<br>如果视口的宽度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。</p>
+<p>vh:相对于视口的高度。视口被均分为100单位的vh。<br>如果视口的高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100。</p>
+<p>vmax：相对于视口的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax。<br>如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为24mm，即(8x300)/100，因为宽度比高度要大，所以计算的时候相对于宽度。</p>
+<p>vmin:相对于视口的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vmin。<br>如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为高度比宽度要小，所以计算的时候相对于高度。</p>
+<p>cm：厘米（Centimeters）。绝对长度单位。<br>厘米（Centimeters）。绝对长度单位。<br>1in = 2.54cm = 25.4 mm = 101.6q = 72pt = 6pc = 96px</p>
+<p>mm:毫米（Millimeters）。绝对长度单位。</p>
+<p>in:英寸（Inches）。绝对长度单位。</p>
+<p>pt:点（Points）。绝对长度单位。</p>
+<p>pc:派卡（Picas）。绝对长度单位。相当于我国新四号铅字的尺寸。</p>
+<p>px:相对长度单位。像素（Pixels）。</p>
+<p>visibility 属性规定元素是否可见。<br>提示：即使不可见的元素也会占据页面上的空间。请使用 “display” 属性来创建不占据页面空间的不可见元素。</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a><image></image></h1><h2 id="image"><a href="#image" class="headerlink" title="image()"></a>image()</h2><h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><p>image() = image( [ [ <image> | <string> ]? , <color>? ]! )</color></string></image></p>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>image() 用于指定图像或者图像替代。允许作者这样做：<br>使用媒体片段（media fragments）裁减图像的部分区域;</p>
+<h2 id="image-set"><a href="#image-set" class="headerlink" title="image-set()"></a>image-set()</h2><h3 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h3><p>image-set() = image-set( <image-set-option># )</image-set-option></p>
+<p><image-set-option> = [ <image> | <string> ] <resolution></resolution></string></image></image-set-option></p>
+<h3 id="说明：-1"><a href="#说明：-1" class="headerlink" title="说明："></a>说明：</h3><p>image-set() 可以根据用户设备的分辨率匹配合适的图像。<br>为不同的设备分配合适得图像;</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a><gradient></gradient></h1><h2 id="linear-gradient"><a href="#linear-gradient" class="headerlink" title="linear-gradient()"></a>linear-gradient()</h2><h3 id="语法：-2"><a href="#语法：-2" class="headerlink" title="语法："></a>语法：</h3><p><linear-gradient> = linear-gradient([ [ <angle> | to <side-or-corner> ] ,]? <color-stop>[, <color-stop>]+)</color-stop></color-stop></side-or-corner></angle></linear-gradient></p>
+<p><side-or-corner> = [left | right] || [top | bottom]</side-or-corner></p>
+<p><color-stop> = <color> [ <length> | <percentage> ]?</percentage></length></color></color-stop></p>
+<h3 id="取值："><a href="#取值：" class="headerlink" title="取值："></a>取值：</h3><p>下述值用来表示渐变的方向，可以使用角度或者关键字来设置：</p>
+<p><angle>：<br>用角度值指定渐变的方向（或角度）。<br>to left：<br>设置渐变为从右到左。相当于: 270deg<br>to right：<br>设置渐变从左到右。相当于: 90deg<br>to top：<br>设置渐变从下到上。相当于: 0deg<br>to bottom：<br>设置渐变从上到下。相当于: 180deg。这是默认值，等同于留空不写。</angle></p>
+<p><color-stop> 用于指定渐变的起止颜色：</color-stop></p>
+<p><color>：<br>指定颜色。</color></p>
+<p><length>：<br>用长度值指定起止色位置。不允许负值</length></p>
+<p><percentage>：<br>用百分比指定起止色位置。</percentage></p>
+<h2 id="radial-gradient"><a href="#radial-gradient" class="headerlink" title="radial-gradient()"></a>radial-gradient()</h2><h3 id="语法：-3"><a href="#语法：-3" class="headerlink" title="语法："></a>语法：</h3><p><radial-gradient> = radial-gradient([ [ <shape> || <size> ] [ at <position> ]? , | at <position>, ]?<color-stop>[ , <color-stop> ]+)</color-stop></color-stop></position></position></size></shape></radial-gradient></p>
+<p><position> = [ <length>① | <percentage>① | left | center① | right ]? [ <length>② | <percentage>② | top | center② | bottom ]?</percentage></length></percentage></length></position></p>
+<p><shape> = circle | ellipse</shape></p>
+<p><size> = <extent-keyword> | [ <circle-size> || <ellipse-size> ]</ellipse-size></circle-size></extent-keyword></size></p>
+<p><extent-keyword> = closest-side | closest-corner | farthest-side | farthest-corner</extent-keyword></p>
+<p><circle-size> = <length></length></circle-size></p>
+<p><ellipse-size> = [ <length> | <percentage> ]{2}</percentage></length></ellipse-size></p>
+<p><shape-size> = <length> | <percentage></percentage></length></shape-size></p>
+<p><color-stop> = <color> [ <length> | <percentage> ]?</percentage></length></color></color-stop></p>
+<h3 id="取值：-1"><a href="#取值：-1" class="headerlink" title="取值："></a>取值：</h3><p><position> 确定圆心的位置。如果提供2个参数，第一个表示横坐标，第二个表示纵坐标；如果只提供一个，第二值默认为50%，即center</position></p>
+<p><percentage>①：<br>用百分比指定径向渐变圆心的横坐标值。可以为负值。</percentage></p>
+<p><length>①：<br>用长度值指定径向渐变圆心的横坐标值。可以为负值。<br>left：<br>设置左边为径向渐变圆心的横坐标值。<br>center①：<br>设置中间为径向渐变圆心的横坐标值。<br>right：<br>设置右边为径向渐变圆心的横坐标值。</length></p>
+<p><percentage>②：<br>用百分比指定径向渐变圆心的纵坐标值。可以为负值。</percentage></p>
+<p><length>②：<br>用长度值指定径向渐变圆心的纵坐标值。可以为负值。<br>top：<br>设置顶部为径向渐变圆心的纵坐标值。<br>center②：<br>设置中间为径向渐变圆心的纵坐标值。<br>bottom：<br>设置底部为径向渐变圆心的纵坐标值。</length></p>
+<p><shape> 确定圆的类型<br>circle：<br>指定圆形的径向渐变<br>ellipse：<br>指定椭圆形的径向渐变。</shape></p>
+<p><extent-keyword> circle | ellipse 都接受该值作为 size<br>closest-side：<br>指定径向渐变的半径长度为从圆心到离圆心最近的边<br>closest-corner：<br>指定径向渐变的半径长度为从圆心到离圆心最近的角<br>farthest-side：<br>指定径向渐变的半径长度为从圆心到离圆心最远的边<br>farthest-corner：<br>指定径向渐变的半径长度为从圆心到离圆心最远的角</extent-keyword></p>
+<p><circle-size> circle 接受该值作为 size</circle-size></p>
+<p><length>：<br>用长度值指定正圆径向渐变的半径长度。不允许负值。</length></p>
+<p><ellipse-size> ellipse 接受该值作为 size</ellipse-size></p>
+<p><length>：<br>用长度值指定椭圆径向渐变的横向或纵向半径长度。不允许负值。</length></p>
+<p><percentage>：<br>用百分比指定椭圆径向渐变的横向或纵向半径长度。不允许负值。</percentage></p>
+<p><color-stop> 用于指定渐变的起止颜色：</color-stop></p>
+<p><color>：<br>指定颜色。</color></p>
+<p><length>：<br>用长度值指定起止色位置。不允许负值</length></p>
+<p><percentage>：<br>用百分比指定起止色位置。不允许负值</percentage></p>
+<h2 id="repeating-linear-gradient"><a href="#repeating-linear-gradient" class="headerlink" title="repeating-linear-gradient()"></a>repeating-linear-gradient()</h2><p>用重复的线性渐变创建图像。<br>repeating-linear-gradient()的语法与linear-gradient()相同。</p>
+<h2 id="repeating-radial-gradient"><a href="#repeating-radial-gradient" class="headerlink" title="repeating-radial-gradient()"></a>repeating-radial-gradient()</h2><p>用重复的径向渐变创建图像。<br>repeating-radial-gradient()的语法与radial-gradient()相同。</p>
+<h2 id="outline"><a href="#outline" class="headerlink" title="outline"></a>outline</h2><p>定义和用法<br>outline-style 属性用于设置元素的整个轮廓的样式。样式不能是 none，否则轮廓不会出现。<br>outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。outline 属性设置元素周围的轮廓线。</p>
+<h2 id="HTML-DOM-getElementsByTagName-方法"><a href="#HTML-DOM-getElementsByTagName-方法" class="headerlink" title="HTML DOM getElementsByTagName() 方法"></a>HTML DOM getElementsByTagName() 方法</h2><p>返回带有指定标签名的对象的集合:<br>document.getElementsByTagName(“P”);<br>实例<br>创建一个按钮:<br>var btn=document.createElement(“BUTTON”);</p>
+<h2 id="HTML-DOM-appendChild-方法"><a href="#HTML-DOM-appendChild-方法" class="headerlink" title="HTML DOM appendChild() 方法"></a>HTML DOM appendChild() 方法</h2><p>appendChild() 方法可向节点的子节点列表的末尾添加新的子节点。<br>实例<br>添加列表项:<br>document.getElementById(“myList”).appendChild(newListItem);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&quot;myList1&quot;&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;ul id=&quot;myList2&quot;&gt;&lt;li&gt;Water&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;单击按钮将项目从一个列表移动到另一个列表中&lt;/p&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction()&#123;</div><div class="line">	var node=document.getElementById(&quot;myList2&quot;).lastChild;</div><div class="line">	document.getElementById(&quot;myList1&quot;).appendChild(node);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="HTML-DOM-setAttribute-方法"><a href="#HTML-DOM-setAttribute-方法" class="headerlink" title="HTML DOM setAttribute() 方法"></a>HTML DOM setAttribute() 方法</h2><p>定义和用法<br>setAttribute() 方法添加指定的属性，并为其赋指定的值。<br>如果这个指定的属性已存在，则仅设置/更改值。</p>
+<p>实例<br>设置 input 元素的 type 属性：<br>document.getElementsByTagName(“INPUT”)[0].setAttribute(“type”,”button”);</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/05/14/css/" data-id="cj2osqaom0000hsfbekcqig7x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/jqueryhtml/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bootstrap/">Bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ThinkPhp/">ThinkPhp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/日志/二级目录/">二级目录</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/格式/">格式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/粤嵌培训/">粤嵌培训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/14/css/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/11/jqueryhtml/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/10/jquery/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/30/myPhpWork/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/26/ThinkPhp3.1快速入门/">ThinkPhp3.1快速入门</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Shevon Liao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
