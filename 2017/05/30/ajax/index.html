@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Shevon&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="AJAX 教程AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。AJAX 不是新的编程语言，而是一种使用现有标准的新方法。AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 AJAX - 创建 XMLHt">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shevon's Blog">
+<meta property="og:url" content="https://wellwellrightbaby.github.io/2017/05/30/ajax/index.html">
+<meta property="og:site_name" content="Shevon's Blog">
+<meta property="og:description" content="AJAX 教程AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。AJAX 不是新的编程语言，而是一种使用现有标准的新方法。AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 AJAX - 创建 XMLHt">
+<meta property="og:updated_time" content="2017-05-30T08:53:13.771Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shevon's Blog">
+<meta name="twitter:description" content="AJAX 教程AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。AJAX 不是新的编程语言，而是一种使用现有标准的新方法。AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。 AJAX - 创建 XMLHt">
+  
+    <link rel="alternate" href="/atom.xml" title="Shevon&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Shevon&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Fighting in my all life</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wellwellrightbaby.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/30/ajax/" class="article-date">
+  <time datetime="2017-05-30T08:28:14.744Z" itemprop="datePublished">2017-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="AJAX-教程"><a href="#AJAX-教程" class="headerlink" title="AJAX 教程"></a>AJAX 教程</h1><p>AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。<br>AJAX 不是新的编程语言，而是一种使用现有标准的新方法。<br>AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。<br>AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。</p>
+<h2 id="AJAX-创建-XMLHttpRequest-对象"><a href="#AJAX-创建-XMLHttpRequest-对象" class="headerlink" title="AJAX - 创建 XMLHttpRequest 对象"></a>AJAX - 创建 XMLHttpRequest 对象</h2><p>XMLHttpRequest 是 AJAX 的基础。</p>
+<h3 id="XMLHttpRequest-对象"><a href="#XMLHttpRequest-对象" class="headerlink" title="XMLHttpRequest 对象"></a>XMLHttpRequest 对象</h3><p>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。<br>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>创建 XMLHttpRequest 对象的语法：<br>variable=new XMLHttpRequest();</p>
+<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br>variable=new ActiveXObject(“Microsoft.XMLHTTP”);<br>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：<br>实例<br>var xmlhttp;<br>if (window.XMLHttpRequest)<br>{<br>    //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码<br>    xmlhttp=new XMLHttpRequest();<br>}<br>else<br>{<br>    // IE6, IE5 浏览器执行代码<br>    xmlhttp=new ActiveXObject(“Microsoft.XMLHTTP”);<br>}</p>
+<h2 id="AJAX-向服务器发送请求请求"><a href="#AJAX-向服务器发送请求请求" class="headerlink" title="AJAX - 向服务器发送请求请求"></a>AJAX - 向服务器发送请求请求</h2><p>XMLHttpRequest 对象用于和服务器交换数据。<br>向服务器发送请求<br>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：<br>xmlhttp.open(“GET”,”ajax_info.txt”,true);<br>xmlhttp.send();</p>
+<p>方法    描述<br>open(method,url,async)<br>规定请求的类型、URL 以及是否异步处理请求。<br>method：请求的类型；GET 或 POST<br>url：文件在服务器上的位置<br>async：true（异步）或 false（同步）<br>send(string)<br>将请求发送到服务器。<br>string：仅用于 POST 请求</p>
+<h2 id="AJAX-服务器-响应"><a href="#AJAX-服务器-响应" class="headerlink" title="AJAX - 服务器 响应"></a>AJAX - 服务器 响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br>属性    描述<br>responseText    获得字符串形式的响应数据。<br>responseXML    获得 XML 形式的响应数据。</p>
+<h2 id="AJAX-onreadystatechange-事件"><a href="#AJAX-onreadystatechange-事件" class="headerlink" title="AJAX - onreadystatechange 事件"></a>AJAX - onreadystatechange 事件</h2><p>onreadystatechange 事件<br>当请求被发送到服务器时，我们需要执行一些基于响应的任务。<br>每当 readyState 改变时，就会触发 onreadystatechange 事件。<br>readyState 属性存有 XMLHttpRequest 的状态信息。</p>
+<h3 id="使用回调函数"><a href="#使用回调函数" class="headerlink" title="使用回调函数"></a>使用回调函数</h3><p>回调函数是一种以参数形式传递给另一个函数的函数。<br>如果您的网站上存在多个 AJAX 任务，那么您应该为创建 XMLHttpRequest 对象编写一个标准的函数，并为每个 AJAX 任务调用该函数。<br>该函数调用应该包含 URL 以及发生 onreadystatechange 事件时执行的任务（每次调用可能不尽相同）：</p>
+<p>服务器常用的状态码及其对应的含义如下：<br> 200：服务器响应正常。<br> 304：该资源在上次请求之后没有任何修改（这通常用于浏览器的缓存机制，使用GET请求时尤其需要注意）。<br> 400：无法找到请求的资源。<br> 401：访问资源的权限不够。<br> 403：没有权限访问资源。<br> 404：需要访问的资源不存在。<br> 405：需要访问的资源被禁止。<br> 407：访问的资源需要代理身份验证。<br> 414：请求的URL太长。<br> 500：服务器内部错误。</p>
+<h2 id="ajax-ASP-PHP"><a href="#ajax-ASP-PHP" class="headerlink" title="ajax ASP/PHP"></a>ajax ASP/PHP</h2><h2 id="ajax-数据库"><a href="#ajax-数据库" class="headerlink" title="ajax 数据库"></a>ajax 数据库</h2><h2 id="ajax-XML"><a href="#ajax-XML" class="headerlink" title="ajax XML"></a>ajax XML</h2><h2 id="ajax-实例"><a href="#ajax-实例" class="headerlink" title="ajax 实例"></a>ajax 实例</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wellwellrightbaby.github.io/2017/05/30/ajax/" data-id="cj3hdzocy0000fcfb6kn63csb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/25/css3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          css3
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bootstrap/">Bootstrap</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ThinkPhp/">ThinkPhp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/css3/">css3</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jquery/">jquery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vue/">vue</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/日志/二级目录/">二级目录</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/格式/">格式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/粤嵌培训/">粤嵌培训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/30/ajax/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/25/css3/">css3</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/14/css/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/11/jqueryhtml/">jquery</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/10/jquery/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Shevon Liao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

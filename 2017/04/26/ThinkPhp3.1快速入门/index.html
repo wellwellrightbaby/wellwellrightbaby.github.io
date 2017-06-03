@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/index.html">
 <meta property="og:site_name" content="Shevon's Blog">
 <meta property="og:description" content="摘要:thinkphp">
-<meta property="og:updated_time" content="2017-05-05T06:32:02.122Z">
+<meta property="og:updated_time" content="2017-05-29T11:57:38.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThinkPhp3.1快速入门">
 <meta name="twitter:description" content="摘要:thinkphp">
@@ -97,13 +97,39 @@
         <p>摘要:thinkphp<br><a id="more"></a><br>正文:</p>
 <p>[TOC]</p>
 <p><a href="www.thinkphp.cn/info/60.html">ThinkPHP3.1快速入门</a></p>
-<p>M函数，是ThinkPHP内置的实例化模型的方法，而且用M方法实例化模型不需要创建对应的模型类，你可以理解为M方法是直接在操作底层的Model类，而Model类具备基本的CURD操作方法。</p>
-<p>my wrong:<br>‘DB_DSN’ =&gt; ‘mysql://root@localhost:3306/thinkphp’<br>多写了这句话，我很惨  。。。</p>
+<h2 id="M函数"><a href="#M函数" class="headerlink" title="M函数"></a>M函数</h2><p>是ThinkPHP内置的实例化模型的方法，而且用M方法实例化模型不需要创建对应的模型类，你可以理解为M方法是直接在操作底层的Model类，而Model类具备基本的CURD操作方法。</p>
+<h2 id="my-wrong"><a href="#my-wrong" class="headerlink" title="my wrong"></a>my wrong</h2><p>‘DB_DSN’ =&gt; ‘mysql://root@localhost:3306/thinkphp’<br>多写了这句话，我很惨  。。。</p>
+<p>use Think\Controller;<br>class IndexController extends Controller<br>等同于使用：<br>class IndexController extends \Think\Controller</p>
+<h2 id="开发建议"><a href="#开发建议" class="headerlink" title="开发建议"></a>开发建议</h2><p>在使用ThinkPHP进行开发的过程中，我们给出如下建议，会让你的开发变得更轻松：<br>遵循框架的命名规范和目录规范；<br>开发过程中尽量开启调试模式，及早发现问题；<br>多看看日志文件，查找隐患问题；<br>养成使用I函数获取输入变量的好习惯；<br>更新或者环境改变后遇到问题首要问题是清空Runtime目录；</p>
+<p>ThinkPHP的控制器是一个类，而操作则是控制器类的一个公共方法。</p>
+<p><a href="http://php.net/manual/zh/language.namespaces.nested.php" target="_blank" rel="external">PHP命名空间</a></p>
+<h2 id="前置后置"><a href="#前置后置" class="headerlink" title="前置后置"></a>前置后置</h2><p>//前置操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public function _before_index()&#123;</div><div class="line">        echo &apos;before&apos;;</div><div class="line">&#125;</div><div class="line">public function index()&#123;</div><div class="line">        echo &apos;index&apos;;</div><div class="line">&#125;</div><div class="line">//后置操作方法</div><div class="line">public function _after_index()&#123;</div><div class="line">        echo &apos;after&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="U方法"><a href="#U方法" class="headerlink" title="U方法"></a>U方法</h2><p>为了配合所使用的URL模式，我们需要能够动态的根据当前的URL设置生成对应的URL地址，为此，ThinkPHP内置提供了U方法，用于URL的动态生成，可以确保项目在移植过程中不受环境的影响。</p>
+<p>定义规则<br>U方法的定义规则如下（方括号内参数根据实际应用决定）：<br>U(‘地址表达式’,[‘参数’],[‘伪静态后缀’],[‘显示域名’])<br>地址表达式<br>地址表达式的格式定义如下：<br>[模块/控制器/操作#锚点@域名]?参数1=值1&amp;参数2=值2…<br>如果不定义模块的话 就表示当前模块名称，下面是一些简单的例子：<br>U(‘User/add’) // 生成User控制器的add操作的URL地址<br>U(‘Blog/read?id=1’) // 生成Blog控制器的read操作 并且id为1的URL地址<br>U(‘Admin/User/select’) // 生成Admin模块的User控制器的select操作的URL地址</p>
+<h2 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h2><p>在应用开发中，经常会遇到一些带有提示信息的跳转页面，例如操作成功或者操作错误页面，并且自动跳转到另外一个目标页面。系统的\Think\Controller类内置了两个跳转方法success和error，用于页面跳转提示，而且可以支持ajax提交。<br>使用方法很简单，举例如下：<br>$User = M(‘User’); //实例化User对象<br>$result = $User-&gt;add($data);<br>if($result){<br>    //设置成功后跳转页面的地址，默认的返回页面是$_SERVER[‘HTTP_REFERER’]<br>    $this-&gt;success(‘新增成功’, ‘User/list’);<br>} else {<br>    //错误页面的默认跳转页面是返回前一页，通常不需要设置<br>    $this-&gt;error(‘新增失败’);<br>}<br>success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：<br>// 操作完成3秒后跳转到 /Article/index<br>$this-&gt;success(‘操作完成’,’/Article/index’,3);<br>// 操作失败5秒后跳转到 /Article/error<br>$this-&gt;error(‘操作失败’,’/Article/error’,5);<br>跳转地址是可选的，success方法的默认跳转地址是$_SERVER[“HTTP_REFERER”]，error方法的默认跳转地址是javascript:history.back(-1);。<br>默认的等待时间success方法是1秒，error方法是3秒</p>
+<p>success和error方法会自动判断当前请求是否属于Ajax请求，如果属于Ajax请求则会调用ajaxReturn方法返回信息。 ajax方式下面，success和error方法会封装下面的数据返回：<br>$data[‘info’]   =   $message; // 提示信息内容<br>$data[‘status’] =   $status;  // 状态 如果是success是1 error 是0<br>$data[‘url’]    =   $jumpUrl; // 成功或者错误的跳转地址</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>Controller类的redirect方法可以实现页面的重定向功能。<br>redirect方法的参数用法和U函数的用法一致（参考URL生成部分），例如：<br>//重定向到New模块的Category操作<br>$this-&gt;redirect(‘New/category’, array(‘cate_id’ =&gt; 2), 5, ‘页面跳转中…’);<br>复制代码<br>上面的用法是停留5秒后跳转到New模块的category操作，并且显示页面跳转中字样，重定向后会改变当前的URL地址。<br>如果你仅仅是想重定向要一个指定的URL地址，而不是到某个模块的操作方法，可以直接使用redirect函数重定向，例如：<br>//重定向到指定的URL地址<br>redirect(‘/New/category/cate_id/2’, 5, ‘页面跳转中…’)<br>Redirect函数的第一个参数是一个URL地址。<br>控制器的redirect方法和redirect函数的区别在于前者是用URL规则定义跳转地址，后者是一个纯粹的URL地址</p>
+<p> $this-&gt;redirect(‘News/archive’,’’,3,’please wait for 3 seconds’);</p>
+<h2 id="I方法"><a href="#I方法" class="headerlink" title="I方法"></a>I方法</h2><p>我们以GET变量类型为例，说明下I方法的使用：<br>echo I(‘get.id’); // 相当于 $_GET[‘id’]<br>echo I(‘get.name’); // 相当于 $_GET[‘name’]<br>复制代码<br>支持默认值：<br>echo I(‘get.id’,0); // 如果不存在$_GET[‘id’] 则返回0<br>echo I(‘get.name’,’’); // 如果不存在$_GET[‘name’] 则返回空字符串<br>采用方法过滤：<br>// 采用htmlspecialchars方法对$_GET[‘name’] 进行过滤，如果不存在则返回空字符串<br>echo I(‘get.name’,’’,’htmlspecialchars’);<br>支持直接获取整个变量类型，例如：<br>// 获取整个$_GET 数组<br>I(‘get.’);<br>用同样的方式，我们可以获取post或者其他输入类型的变量，例如：<br>I(‘post.name’,’’,’htmlspecialchars’); // 采用htmlspecialchars方法对$_POST[‘name’] 进行过滤，如果不存在则返回空字符串<br>I(‘session.user_id’,0); // 获取$_SESSION[‘user_id’] 如果不存在则默认为0<br>I(‘cookie.’); // 获取整个 $_COOKIE 数组<br>I(‘server.REQUEST_METHOD’); // 获取 $_SERVER[‘REQUEST_METHOD’] </p>
+<h2 id="判断请求类型"><a href="#判断请求类型" class="headerlink" title="判断请求类型"></a>判断请求类型</h2><p>常量    说明<br>IS_GET    判断是否是GET方式提交<br>IS_POST    判断是否是POST方式提交<br>IS_PUT    判断是否是PUT方式提交<br>IS_DELETE    判断是否是DELETE方式提交<br>IS_AJAX    判断是否是AJAX提交<br>REQUEST_METHOD    当前提交类型</p>
+<h2 id="空操作"><a href="#空操作" class="headerlink" title="空操作"></a>空操作</h2><p>public function _empty($name){<br>        //把所有城市的操作解析到city方法<br>        $this-&gt;city($name);<br>    }<br>    //注意 city方法 本身是 protected 方法<br>    protected function city($name){<br>        //和$name这个城市相关的处理<br>         echo ‘当前城市’ . $name;<br>    }</p>
+<h2 id="空控制器"><a href="#空控制器" class="headerlink" title="空控制器"></a>空控制器</h2><p>class EmptyController extends Controller{<br>    public function index(){<br>        //根据当前控制器名来判断要执行那个城市的操作<br>        $cityName = CONTROLLER_NAME;<br>        $this-&gt;city($cityName);<br>    }<br>    //注意 city方法 本身是 protected 方法<br>    protected function city($name){<br>        //和$name这个城市相关的处理<br>         echo ‘当前城市’ . $name;<br>    }<br>}</p>
+<h2 id="模型类"><a href="#模型类" class="headerlink" title="模型类"></a>模型类</h2><p>模型类的作用大多数情况是操作数据表的，如果按照系统的规范来命名模型类的话，大多数情况下是可以自动对应数据表。<br>模型类的命名规则是除去表前缀的数据表名称，采用驼峰法命名，并且首字母大写，然后加上模型层的名称（默认定义是Model），例如：<br>模型名 约定对应数据表（假设数据库的前缀定义是 think_）<br>UserModel   think_user<br>UserTypeModel   think_user_type<br>如果你的规则和上面的系统约定不符合，那么需要设置Model类的数据表名称属性，以确保能够找到对应的数据表。</p>
+<h2 id="连贯操作"><a href="#连贯操作" class="headerlink" title="连贯操作"></a>连贯操作</h2><p>作用  支持的参数类型<br>where<em>  用于查询或者更新条件的定义   字符串、数组和对象<br>table   用于定义要操作的数据表名称   字符串和数组<br>alias   用于给当前数据表定义别名    字符串<br>data    用于新增或者更新数据之前的数据对象赋值 数组和对象<br>field   用于定义要查询的字段（支持字段排除）  字符串和数组<br>order   用于对结果排序 字符串和数组<br>limit   用于限制查询结果数量  字符串和数字<br>page    用于查询分页（内部会转换成limit） 字符串和数字<br>group   用于对查询的group支持   字符串<br>having  用于对查询的having支持  字符串<br>join</em>   用于对查询的join支持    字符串和数组<br>union<em>  用于对查询的union支持   字符串、数组和对象<br>distinct    用于查询的distinct支持 布尔值<br>lock    用于数据库的锁机制   布尔值<br>cache   用于查询缓存  支持多个参数<br>relation    用于关联查询（需要关联模型支持）    字符串<br>result  用于返回数据转换    字符串<br>validate    用于数据自动验证    数组<br>auto    用于数据自动完成    数组<br>filter  用于数据过滤  字符串<br>scope</em>  用于命名范围  字符串、数组<br>bind*   用于数据绑定操作    数组或多个参数<br>token   用于令牌验证  布尔值<br>comment 用于SQL注释 字符串<br>index   用于数据集的强制索引（3.2.3新增） 字符串<br>strict  用于数据入库的严格检测（3.2.3新增）    布尔值</p>
+<h3 id="where"><a href="#where" class="headerlink" title="where"></a>where</h3><p>可以完成包括普通查询、表达式查询、快捷查询、区间查询、组合查询在内的查询操作。where方法的参数支持字符串和数组，虽然也可以使用对象但并不建议。<br>多次的数组条件表达式会最终合并，但字符串条件则只支持一次。</p>
+<h3 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h3><p>alias用于设置当前数据表的别名，便于使用其他的连贯操作例如join方法等。</p>
+<h3 id="data方法"><a href="#data方法" class="headerlink" title="data方法"></a>data方法</h3><p>data方法也是模型类的连贯操作方法之一，用于设置当前要操作的数据对象的值。<br>写操作<br>通常情况下我们都是通过create方法或者赋值的方式生成数据对象，然后写入数据库</p>
+<p>在调用save方法更新数据的时候 会自动判断当前的数据对象里面是否有主键值存在，如果有的话会自动作为更新条件</p>
+<h3 id="field方法"><a href="#field方法" class="headerlink" title="field方法"></a>field方法</h3><p>field方法属于模型的连贯操作方法之一，主要目的是标识要返回或者操作的字段，可以用于查询和写入操作。</p>
+<h3 id="order方法"><a href="#order方法" class="headerlink" title="order方法"></a>order方法</h3><p>order方法属于模型的连贯操作方法之一，用于对操作的结果排序。</p>
+<h3 id="limit方法"><a href="#limit方法" class="headerlink" title="limit方法"></a>limit方法</h3><p>limit方法也是模型类的连贯操作方法之一，主要用于指定查询和操作的数量，特别在分页查询的时候使用较多。ThinkPHP的limit方法可以兼容所有的数据库驱动类的。<br>用于文章分页查询是limit方法比较常用的场合。</p>
+<h3 id="page方法"><a href="#page方法" class="headerlink" title="page方法"></a>page方法</h3><h2 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h2><p>thinkphp 在 Action 类里面使用 assign 方法对模板变量进行赋值；所以assign(‘row’,$row)中第一个参数‘row’表示在模版取值用的变量名，第二个参数是row变量的值。示例如下：</p>
+<h2 id="foreach遍历"><a href="#foreach遍历" class="headerlink" title="foreach遍历"></a>foreach遍历</h2><p>foreach name=”select” item=”al”<br>tr&gt;<br>    td&gt;{$al.managerid}/td&gt;<br>    td&gt;{$al.managername}/td&gt;<br>    td&gt;{$al.managerpass}/td&gt;<br>/tr&gt;<br>br&gt;<br>/foreach</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj3454wkm00018sfbh9ikt7od" class="article-share-link">Share</a>
+      <a data-url="https://wellwellrightbaby.github.io/2017/04/26/ThinkPhp3.1快速入门/" data-id="cj3hdzoen0002fcfbyvg4f17f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,6 +208,10 @@
       <ul>
         
           <li>
+            <a href="/2017/05/30/ajax/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2017/05/25/css3/">css3</a>
           </li>
         
@@ -195,10 +225,6 @@
         
           <li>
             <a href="/2017/05/10/jquery/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/30/myPhpWork/">(no title)</a>
           </li>
         
       </ul>
